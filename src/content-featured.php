@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
 	<div class="entry-image">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail( 'feature' ); ?>
 	</div>
 	<?php endif; ?>
 
@@ -22,6 +22,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php andromeda_excerpt(); ?>
+		<?php andromeda_excerpt( 150 ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

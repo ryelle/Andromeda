@@ -7,6 +7,17 @@
  * @package Andromeda
  */
 
+/**
+ * Display an excerpt of a given length.
+ * REQUIRES PHP 5.3+ :(
+ */
+function andromeda_excerpt( $length = 55 ) {
+	$function = function( $default ) use ( $length ){ return $length; };
+	add_filter( 'excerpt_length', $function );
+	the_excerpt();
+	remove_filter( 'excerpt_length', $function );
+}
+
 if ( ! function_exists( 'the_posts_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.

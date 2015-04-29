@@ -19,6 +19,31 @@ h4 {
 	@include font-size( $font__size-h4 );
 }
 
+.site-header {
+	margin-bottom: $size__gutter-2;
+	text-align: center;
+	border-bottom: 1px solid #222;
+}
+
+.site-branding {
+	margin-bottom: 50px;
+}
+
 .site-title {
+	margin-bottom: 0;
 	font-family: $font__logo;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.site-description {
+	margin: 0;
+	font-style: italic;
+	color: $color__text-meta;
+}
+
+.entry-title {
+	margin-top: 0;
 }

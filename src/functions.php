@@ -46,7 +46,9 @@ function andromeda_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 350, 265, true );
+	add_image_size( 'feature', 640, 480 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

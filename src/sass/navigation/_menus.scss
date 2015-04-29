@@ -1,8 +1,13 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	padding-bottom: $size__gutter;
 	width: 100%;
+
+	font-family: $font__header;
+	@include font-size( 1.8 );
+	font-weight: bold;
+	text-transform: uppercase;
 
 	ul {
 		display: none;
@@ -12,7 +17,6 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
 			position: absolute;
 			top: 1.5em;
 			left: -999em;
@@ -46,19 +50,33 @@
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
+			display: none;
 		}
 	}
+
 	li {
-		float: left;
+		display: inline-block;
 		position: relative;
 
 		&:hover > a,
 		&.focus > a {
 		}
 	}
+
 	a {
 		display: block;
+		padding: 0 0 0 20px;
 		text-decoration: none;
+		&:after {
+			content: '/';
+			color: $color__text-meta;
+			padding: 0 0 0 20px;
+		}
+	}
+
+	li:last-of-type a:after {
+		content: '';
+		padding: 0;
 	}
 
 	.current_page_item > a,
