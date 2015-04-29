@@ -16,7 +16,7 @@ $in_featured = true;
 			setup_postdata( $post );
 
 			 // Include the featured content template.
-			get_template_part( 'content', 'featured' );
+			get_template_part( 'partial/content', 'featured' );
 
 		endforeach;
 		wp_reset_postdata();
