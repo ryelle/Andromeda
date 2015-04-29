@@ -43,3 +43,16 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+.entry-meta {
+	@include font-size( 1.4 );
+	font-style: italic;
+	&, a, a:link, a:visited {
+		color: $color__text-meta;
+	}
+}
+
+.read-more {
+	@include font-size( 2.4 );
+	font-weight: bold;
+}

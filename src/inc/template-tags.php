@@ -11,11 +11,19 @@
  * Display an excerpt of a given length.
  * REQUIRES PHP 5.3+ :(
  */
-function andromeda_excerpt( $length = 55 ) {
+function andromeda_excerpt( $length = 45 ) {
 	$function = function( $default ) use ( $length ){ return $length; };
 	add_filter( 'excerpt_length', $function );
 	the_excerpt();
 	remove_filter( 'excerpt_length', $function );
+
+	printf( '<p class="read-more"><a href="%s" rel="bookmark">%s</a></p>',
+		esc_url( get_permalink() ),
+		sprintf(
+			'' . __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'andromeda' ) . '</p>',
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		)
+	);
 }
 
 if ( ! function_exists( 'the_posts_navigation' ) ) :
@@ -82,19 +90,14 @@ if ( ! function_exists( 'andromeda_posted_on' ) ) :
  */
 function andromeda_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		esc_html( get_the_date() )
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'andromeda' ),
+		_x( '%s', 'post date', 'andromeda' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
