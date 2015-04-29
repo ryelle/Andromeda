@@ -5,3 +5,4 @@ style.css
 rtl.css
 editor-style.css
 *.css.map
+src/js/andromeda.js
