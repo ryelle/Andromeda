@@ -11,11 +11,11 @@
  * See: http://jetpack.me/support/infinite-scroll/
  */
 function andromeda_jetpack_setup() {
-	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => 'andromeda_infinite_scroll_render',
-		'footer'    => 'page',
-	) );
+	// add_theme_support( 'infinite-scroll', array(
+	// 	'container' => 'main',
+	// 	'render'    => 'andromeda_infinite_scroll_render',
+	// 	'footer'    => 'page',
+	// ) );
 
 	add_theme_support( 'featured-content', array(
 		'filter'     => 'andromeda_get_featured_content',
