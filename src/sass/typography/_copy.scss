@@ -64,7 +64,8 @@ big {
 }
 
 .entry-content,
-.entry-summary {
+.entry-summary,
+.textwidget {
 	& > :first-child {
 		margin-top: 0;
 	}

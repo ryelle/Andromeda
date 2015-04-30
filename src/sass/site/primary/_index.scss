@@ -1,5 +1,10 @@
 .sticky { /*! not used */}
 
+.page-header {
+	padding: $size__gutter 0 $size__gutter-3;
+	border-top: 1px solid $color__border;
+}
+
 .hentry {
 	margin: 0 0 $size__gutter-2;
 }

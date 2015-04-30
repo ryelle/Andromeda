@@ -1,5 +1,10 @@
 .widget {
-	margin: 0 0 1.5em;
+	padding: $size__gutter 0 $size__gutter-3;
+	border-top: 1px solid $color__border;
+
+	.widget-title {
+		margin-bottom: $size__gutter-3;
+	}
 
 	/* Make sure select elements fit in widgets. */
 	select {

@@ -23,6 +23,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<header class="page-header">
+			<h3 class="page-title"><?php _e( 'Recent Posts', 'andromeda' ); ?></h3>
+		</header><!-- .page-header -->
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
