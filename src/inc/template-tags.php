@@ -12,15 +12,21 @@
  * REQUIRES PHP 5.3+ :(
  */
 function andromeda_excerpt( $length = 45 ) {
-	$function = function( $default ) use ( $length ){ return $length; };
-	add_filter( 'excerpt_length', $function );
-	the_excerpt();
-	remove_filter( 'excerpt_length', $function );
+	$text = get_the_content('');
+	$text = strip_shortcodes( $text );
+
+	/** This filter is documented in wp-includes/post-template.php */
+	$text = apply_filters( 'the_content', $text );
+	$text = str_replace(']]>', ']]&gt;', $text);
+
+	$text = wp_trim_words( $text, $length );
+
+	echo apply_filters( 'the_excerpt', $text );
 
 	printf( '<p class="read-more"><a href="%s" rel="bookmark">%s</a></p>',
 		esc_url( get_permalink() ),
 		sprintf(
-			'' . __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'andromeda' ) . '</p>',
+			__( 'Continue reading %s', 'andromeda' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		)
 	);
@@ -102,11 +108,12 @@ function andromeda_posted_on() {
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'andromeda' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		'<span class="author vcard"><a class="url fn n" href="%s">%s</a></span>',
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_html( get_the_author() )
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="sep"> | </span><span class="byline">' . $byline . '</span>';
 
 }
 endif;
