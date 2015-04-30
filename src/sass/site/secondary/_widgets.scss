@@ -13,6 +13,7 @@
 }
 
 .footer-widgets {
+	margin-top: $size__gutter-3;
 	.widget {
 		float: left;
 		width: calc( 33.33333% - 26.6666667px );

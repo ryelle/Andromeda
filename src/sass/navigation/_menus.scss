@@ -101,7 +101,6 @@
 }
 
 .comment-navigation,
-.posts-navigation,
 .post-navigation {
 
 	.site-main & {
@@ -109,14 +108,42 @@
 		overflow: hidden;
 	}
 
-	& .nav-previous {
+	.nav-next {
 		float: left;
 		width: 50%;
 	}
 
-	& .nav-next {
+	.nav-previous {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+.posts-navigation {
+	margin-top: $size__gutter-2 + 19px;
+	border-top: 1px solid $color__border;
+
+	.nav-links {
+		margin-top: -19px;
+	}
+
+	.nav-next {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-previous {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+
+	.nav-previous a,
+	.nav-next a {
+		display: inline-block;
+		padding: 10px 30px;
+		background-color: $color__background-body;
+		border: 1px solid $color__border;
 	}
 }

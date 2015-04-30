@@ -42,7 +42,14 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<nav class="navigation posts-navigation" role="navigation">
+				<h2 class="screen-reader-text">Posts navigation</h2>
+				<div class="nav-links">
+					<?php if ( get_next_posts_link() ) : ?>
+					<div class="nav-previous"><?php next_posts_link( __( 'See all recent posts', 'andromeda' ) ); ?></div>
+					<?php endif; ?>
+				</div>
+			</nav>
 
 		<?php else : ?>
 
