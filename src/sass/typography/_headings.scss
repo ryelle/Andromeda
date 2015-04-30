@@ -11,8 +11,12 @@ h2 {
 	@include font-size( $font__size-h2 );
 }
 
-h3 {
+h3,
+.page-title,
+.posts-navigation {
+	font-family: $font__header;
 	@include font-size( $font__size-h3 );
+	font-weight: bold;
 	text-transform: uppercase;
 	line-height: 1;
 }

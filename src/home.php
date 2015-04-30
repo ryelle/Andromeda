@@ -24,7 +24,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<header class="page-header">
-			<h3 class="page-title"><?php _e( 'Recent Posts', 'andromeda' ); ?></h3>
+			<h1 class="page-title"><?php _e( 'Recent Posts', 'andromeda' ); ?></h1>
 		</header><!-- .page-header -->
 
 		<?php if ( have_posts() ) : ?>
