@@ -12,6 +12,17 @@
 	}
 }
 
+.footer-widgets {
+	.widget {
+		float: left;
+		width: calc( 33.33333% - 26.6666667px );
+
+		&:nth-of-type(3n+2) {
+			margin: 0 40px;
+		}
+	}
+}
+
 /* Search widget. */
 .widget_search .search-submit {
 	display: none;
