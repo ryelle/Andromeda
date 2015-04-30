@@ -23,6 +23,14 @@ function andromeda_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'andromeda_body_classes' );
 
+function andromeda_home_template( $template ){
+	if ( is_paged() ){
+		$template = locate_template( array( 'paged' ) );
+	}
+	return $template;
+}
+add_filter( 'home_template', 'andromeda_home_template' );
+
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	/**
 	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
