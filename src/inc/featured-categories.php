@@ -12,9 +12,9 @@
  */
 function andromeda_get_featured_categories(){
 	$categories = array();
-	$categories[] = get_theme_mod( 'first-home-category', 2 );
-	$categories[] = get_theme_mod( 'second-home-category', 4 );
-	$categories[] = get_theme_mod( 'third-home-category', 3 );
+	$categories[] = get_theme_mod( 'first-home-category', false );
+	$categories[] = get_theme_mod( 'second-home-category', false );
+	$categories[] = get_theme_mod( 'third-home-category', false );
 	$categories = array_filter( $categories );
 
 	return $categories;
