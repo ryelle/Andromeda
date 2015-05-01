@@ -18,6 +18,12 @@
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'andromeda' ), 'Andromeda', '<a href="https://themes.redradar.net" rel="designer">Kelly Dwan & Mel Choyce</a>' ); ?>
 		</div><!-- .site-info -->
+
+		<?php if ( $copyright = get_theme_mod( 'copyright', false ) ) : ?>
+		<div class="site-copyright">
+			<?php echo esc_html( $copyright ); ?>
+		</div><!-- .site-copyright -->
+		<?php endif; ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

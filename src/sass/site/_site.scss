@@ -19,3 +19,25 @@ body.sidebar-content {
 ## Comments
 --------------------------------------------------------------*/
 @import "primary/comments";
+
+.site-footer {
+	margin-bottom: $size__gutter-3;
+	font-family: $font__header;
+	color: $color__text-footer;
+	@include font-size( 1.4 );
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	a:link, a:visited {
+		color: $color__text-footer;
+		text-decoration: underline;
+	}
+
+	.site-info {
+		float: left;
+	}
+
+	.site-copyright {
+		float: right;
+	}
+}
