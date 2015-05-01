@@ -22,6 +22,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php andromeda_excerpt( 24 ); ?>
+		<?php andromeda_excerpt( 20 ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

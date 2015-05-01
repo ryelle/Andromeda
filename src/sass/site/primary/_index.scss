@@ -59,7 +59,7 @@
 	.hentry:nth-of-type(6) {
 		.entry-title {
 			margin-top: 10px;
-			@include font-size( 1.6 );
+			@include font-size( $font__size-main );
 		}
 	}
 
@@ -73,7 +73,7 @@
 	}
 
 	.read-more {
-		@include font-size( 1.6 );
+		@include font-size( $font__size-main );
 	}
 }
 
@@ -86,7 +86,7 @@
 
 		.entry-title {
 			margin-top: 10px;
-			@include font-size( 1.6 );
+			@include font-size( $font__size-main );
 		}
 	}
 
@@ -111,7 +111,7 @@
 
 		.entry-title {
 			margin-top: 10px;
-			@include font-size( 1.6 );
+			@include font-size( $font__size-main );
 		}
 	}
 
