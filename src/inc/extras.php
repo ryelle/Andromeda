@@ -19,6 +19,10 @@ function andromeda_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( is_singular() ) {
+		$classes[] = 'singular';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'andromeda_body_classes' );

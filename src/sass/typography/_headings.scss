@@ -61,3 +61,11 @@ h4 {
 .page-title {
 	margin-bottom: 0;
 }
+
+.entry-title {
+	.singular & {
+		margin: 0 0 $size__gutter-2;
+		@include font-size( 6.4 );
+		line-height: 1;
+	}
+}

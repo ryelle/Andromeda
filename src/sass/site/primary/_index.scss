@@ -1,8 +1,11 @@
 .sticky { /*! not used */}
 
+.site-main {
+	border-top: 1px solid $color__border;
+}
+
 .page-header {
 	padding: $size__gutter 0 $size__gutter-3;
-	border-top: 1px solid $color__border;
 }
 
 .hentry {

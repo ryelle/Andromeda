@@ -7,11 +7,16 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0 $size__gutter $size__gutter;
+	border-top: 1px solid $color__border;
+	border-bottom: 1px solid $color__border;
+	@include font-size( 2.0 );
+	font-style: italic;
+	text-align: center;
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 $size__gutter;
 }
 
 pre {
