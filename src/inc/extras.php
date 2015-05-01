@@ -23,6 +23,17 @@ function andromeda_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'andromeda_body_classes' );
 
+function andromeda_pre_get_posts( $query ){
+	if ( ! $query->is_main_query() ) {
+		return;
+	}
+	if ( is_home() && ! is_paged() ){
+		$per_page = get_theme_mod( 'home-per-page', 3 );
+		$query->set( 'posts_per_page', $per_page );
+	}
+}
+add_filter( 'pre_get_posts', 'andromeda_pre_get_posts' );
+
 function andromeda_home_template( $template ){
 	if ( is_paged() ){
 		$template = locate_template( array( 'paged' ) );

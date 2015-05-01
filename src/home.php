@@ -16,7 +16,7 @@ get_header(); ?>
 	<?php
 	if ( is_front_page() && andromeda_has_featured_posts() ) {
 		// Include the featured content template.
-		get_template_part( 'partial/featured' );
+		get_template_part( 'partial/featured-post' );
 	}
 	?>
 
@@ -56,6 +56,11 @@ get_header(); ?>
 			<?php get_template_part( 'partial/content', 'none' ); ?>
 
 		<?php endif; ?>
+
+		<?php
+			// Include the category sections
+			get_template_part( 'partial/featured-category' );
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

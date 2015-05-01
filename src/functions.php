@@ -49,6 +49,7 @@ function andromeda_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 350, 265, true );
 	add_image_size( 'feature', 640, 480 );
+	add_image_size( 'small', 200, 150, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -123,6 +124,11 @@ function andromeda_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'andromeda_scripts' );
+
+/**
+ * Load Featured Categories feature.
+ */
+require get_template_directory() . '/inc/featured-categories.php';
 
 /**
  * Implement the Custom Header feature.
