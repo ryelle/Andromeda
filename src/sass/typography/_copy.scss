@@ -50,7 +50,8 @@ big {
 }
 
 .entry-meta,
-.entry-footer {
+.entry-footer,
+.comment-metadata {
 	@include font-size( 1.4 );
 	font-style: italic;
 

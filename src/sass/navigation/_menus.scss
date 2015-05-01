@@ -101,34 +101,8 @@
 }
 
 .comment-navigation,
+.posts-navigation,
 .post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-
-	.nav-next {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-previous {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
-
-.posts-navigation {
-	clear: both;
-	margin-top: $size__gutter-2 + 19px;
-	border-top: 1px solid $color__border;
-
-	.nav-links {
-		margin-top: -19px;
-	}
-
 	.nav-next {
 		float: left;
 		width: 50%;
@@ -146,5 +120,23 @@
 		padding: 10px 30px;
 		background-color: $color__background-body;
 		border: 1px solid $color__border;
+	}
+}
+
+.comment-navigation,
+.post-navigation {
+	.site-main & {
+		margin: 0 0 $size__gutter-2;
+		overflow: hidden;
+	}
+}
+
+.posts-navigation {
+	clear: both;
+	margin-top: $size__gutter-2 + 19px;
+	border-top: 1px solid $color__border;
+
+	.nav-links {
+		margin-top: -19px;
 	}
 }
