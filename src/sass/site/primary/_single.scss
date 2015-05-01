@@ -10,4 +10,18 @@
 	.entry-image {
 		margin: 0 0 $size__gutter-2;
 	}
+
+	.entry-content {
+		margin: 0 0 $size__gutter-3;
+	}
+
+	.sharedaddy {
+		margin-top: $size__gutter-2;
+	}
+
+	.entry-footer {
+		.sep {
+			display: none;
+		}
+	}
 }

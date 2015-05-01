@@ -49,7 +49,8 @@ big {
 	font-size: 125%;
 }
 
-.entry-meta {
+.entry-meta,
+.entry-footer {
 	@include font-size( 1.4 );
 	font-style: italic;
 
@@ -59,6 +60,12 @@ big {
 
 	.sep {
 		margin: 0 5px;
+	}
+}
+
+.entry-footer {
+	p {
+		margin: 0;
 	}
 }
 

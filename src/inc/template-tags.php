@@ -123,14 +123,42 @@ if ( ! function_exists( 'andromeda_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function andromeda_entry_footer() {
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+
+	$posted_on = sprintf(
+		_x( 'Posted %s', 'post date', 'andromeda' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+
+	$byline = sprintf(
+		'by <span class="author vcard"><a class="url fn n" href="%s">%s</a></span>',
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_html( get_the_author() )
+	);
+
 	// Hide category and tag text for pages.
+	$categories_html = '';
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'andromeda' ) );
 		if ( $categories_list && andromeda_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'andromeda' ) . '</span>', $categories_list );
+			$categories_html = sprintf( '<span class="cat-links">' . __( 'in %1$s', 'andromeda' ) . '</span>', $categories_list );
 		}
+	}
 
+	printf( '<p><span class="posted-on">%s</span> <span class="byline">%s</span> %s</p>',
+		$posted_on,
+		$byline,
+		$categories_html
+	);
+
+	echo '<p>';
+	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'andromeda' ) );
 		if ( $tags_list ) {
@@ -144,7 +172,8 @@ function andromeda_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'andromeda' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( ' ' . __( 'Edit', 'andromeda' ), '<span class="edit-link">', '</span>' );
+	echo '</p>';
 }
 endif;
 
