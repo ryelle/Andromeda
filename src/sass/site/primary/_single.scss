@@ -1,9 +1,13 @@
 .singular {
+	.site-main {
+		padding-top: $size__gutter-2;
+	}
+
 	.entry-title {
 		text-align: center;
 	}
 
-	.site-main {
-		padding-top: $size__gutter-2;
+	.entry-image {
+		margin: 0 0 $size__gutter-2;
 	}
 }

@@ -48,6 +48,7 @@ function andromeda_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 350, 265, true );
+	add_image_size( 'full-width', 920, 9999 );
 	add_image_size( 'feature', 640, 480 );
 	add_image_size( 'small', 200, 150, true );
 
