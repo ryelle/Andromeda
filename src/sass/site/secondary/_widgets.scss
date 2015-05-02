@@ -33,6 +33,18 @@
 	}
 }
 
+body.sidebar-content .footer-widgets {
+	.widget:nth-of-type(3n+1) {
+		width: 300px;
+	}
+	.widget:nth-of-type(3n+2) {
+		margin: 0 40px 0 60px;
+	}
+	.widget:nth-of-type(3n+3) {
+		width: 440px;
+	}
+}
+
 /* Search widget. */
 .widget_search .search-submit {
 	display: none;
