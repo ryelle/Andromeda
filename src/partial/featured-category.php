@@ -26,7 +26,7 @@ foreach ( $categories as $category ) {
 		<nav class="navigation posts-navigation" role="navigation">
 			<div class="nav-links">
 				<?php if ( get_next_posts_link() ) : ?>
-				<div class="nav-previous"><?php next_posts_link( sprintf( __( 'See all %s', 'andromeda' ), andromeda_single_term_title( $category, 'category', false ) ) ); ?></div>
+				<div class="nav-previous"><?php printf( '<a href="%s">%s</a>', get_term_link( $category, 'category' ), sprintf( __( 'See all %s', 'andromeda' ), andromeda_single_term_title( $category, 'category', false ) ) ); ?></div>
 				<?php endif; ?>
 			</div>
 		</nav>
