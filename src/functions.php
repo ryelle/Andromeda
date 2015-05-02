@@ -55,6 +55,7 @@ function andromeda_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'andromeda' ),
+		'social' => __( 'Social Menu', 'andromeda' ),
 	) );
 
 	/*

@@ -1,4 +1,5 @@
 .main-navigation {
+	position: relative;
 	clear: both;
 	display: block;
 	padding-bottom: $size__gutter;
@@ -16,11 +17,14 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			position: absolute;
 			top: 1.5em;
 			left: -999em;
 			z-index: 99999;
+			background-color: $color__background-body;
+			border: 1px solid $color__border;
+			border-top: none;
+			text-align: left;
 
 			ul {
 				left: -999em;
@@ -36,28 +40,28 @@
 
 			a {
 				width: 200px;
-			}
 
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
+				&:after {
+					content: '';
+					padding: 0;
+				}
 			}
 		}
 
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
-			display: none;
 		}
 	}
 
 	li {
 		display: inline-block;
 		position: relative;
+	}
+}
 
+#primary-menu {
+	li {
 		&:hover > a,
 		&.focus > a {
 		}
@@ -83,6 +87,57 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 	}
+}
+
+#social-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	a {
+		color: $color__link-social;
+		@include genericon;
+		margin: 5px 2px 0;
+		padding: 0 !important;
+		width: 24px;
+		height: 26px;
+		font-size: 20px;
+		overflow: hidden;
+
+		&:before {
+			padding: 0 0 5px;
+			display: block;
+		}
+	}
+
+	a[href*="github"]:before { @include genericon-github; }
+	a[href*="dribbble"]:before,
+	a[href*="drbl.in"]:before { @include genericon-dribbble; }
+	a[href*="twitter"]:before,
+	a[href*="t.co"]:before { @include genericon-twitter; }
+	a[href*="facebook"]:before,
+	a[href*="fb.me"]:before { @include genericon-facebook; }
+	a[href*="wordpress"]:before,
+	a[href*="wp.me"]:before { @include genericon-wordpress; }
+	a[href*="google"]:before { @include genericon-googleplus; }
+	a[href*="linkedin"]:before,
+	a[href*="lnkd.in"]:before { @include genericon-linkedin; }
+	a[href*="pinterest"]:before { @include genericon-pinterest; }
+	a[href*="flickr"]:before { @include genericon-flickr; }
+	a[href*="vimeo"]:before { @include genericon-vimeo; }
+	a[href*="youtube"]:before,
+	a[href*="youtu.be"]:before { @include genericon-youtube; }
+	a[href*="tumblr"]:before { @include genericon-tumblr; }
+	a[href*="instagram"]:before { @include genericon-instagram; }
+	a[href*="codepen"]:before { @include genericon-codepen; }
+	a[href*="polldaddy"]:before { @include genericon-polldaddy; }
+	a[href*="path"]:before { @include genericon-path; }
+	a[href*="skype"]:before { @include genericon-skype; }
+	a[href*="digg"]:before { @include genericon-digg; }
+	a[href*="reddit"]:before { @include genericon-reddit; }
+	a[href*="stumbleupon"]:before { @include genericon-stumbleupon; }
+	a[href*="pocket"]:before { @include genericon-pocket; }
+	a[href*="dropbox"]:before { @include genericon-dropbox; }
 }
 
 /* Small menu. */
