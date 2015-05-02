@@ -13,6 +13,7 @@ body.sidebar-content {
 ## Posts and pages
 --------------------------------------------------------------*/
 @import "primary/index";
+@import "primary/archive";
 @import "primary/single";
 
 /*--------------------------------------------------------------
@@ -22,6 +23,8 @@ body.sidebar-content {
 
 .site-footer {
 	margin-bottom: $size__gutter-3;
+	padding-top: $size__gutter-2;
+	border-top: 1px solid $color__border;
 	font-family: $font__header;
 	color: $color__text-footer;
 	@include font-size( 1.4 );
