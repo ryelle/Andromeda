@@ -15,43 +15,6 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
-		ul {
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-			background-color: $color__background-body;
-			border: 1px solid $color__border;
-			border-top: none;
-			text-align: left;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-
-				&:after {
-					content: '';
-					padding: 0;
-				}
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
 	}
 
 	li {
@@ -61,9 +24,16 @@
 }
 
 #primary-menu {
+	line-height: 1;
+
 	li {
 		&:hover > a,
-		&.focus > a {
+		&.focus > a {}
+
+		&:hover > ul,
+		&.focus > ul {
+			left: auto;
+			margin-left: -25px;
 		}
 	}
 
@@ -71,21 +41,81 @@
 		display: block;
 		padding: 0 0 0 20px;
 		text-decoration: none;
+
 		&:after {
 			content: '/';
 			color: $color__text-meta;
 			padding: 0 0 0 20px;
-		}
-	}
 
-	li:last-of-type a:after {
-		content: '';
-		padding: 0;
+			li:last-of-type & {
+				content: '';
+				padding: 0;
+			}
+		}
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
-	.current_page_ancestor > a {
+	.current_page_ancestor > a {}
+
+	> li > ul {
+		position: absolute;
+		top: 18px;
+		left: -999em;
+		z-index: 99999;
+		background-color: $color__background-body;
+		text-align: left;
+
+		&:before {
+			content: ' ';
+			display: block;
+			height: 20px;
+		}
+
+		li {
+			border-left: 1px solid $color__border;
+			border-right: 1px solid $color__border;
+
+			ul {
+				li {
+					padding-top: 0 !important;
+					padding-bottom: 0 !important;
+					border: none !important;
+				}
+
+				a {
+					padding-left: 30px;
+
+					&:before {
+						content: '\2014 ';
+					}
+				}
+			}
+
+			&:first-of-type {
+				padding-top: 10px;
+			}
+
+			&:last-of-type {
+				padding-bottom: 10px;
+				border-bottom: 1px solid $color__border;
+			}
+
+			&:hover > ul,
+			&.focus > ul {
+				margin-left: 0;
+			}
+		}
+
+		a {
+			padding: 6px 20px;
+			width: 200px;
+
+			&:after {
+				content: '';
+				padding: 0;
+			}
+		}
 	}
 }
 
