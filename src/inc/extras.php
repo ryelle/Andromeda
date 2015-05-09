@@ -27,6 +27,18 @@ function andromeda_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'andromeda_body_classes' );
 
+/**
+ * Adds custom classes to the array of nav item classes.
+ *
+ * @param array $classes Classes for the current nav item.
+ * @return array
+ */
+function andromeda_nav_menu_classes( $classes, $item, $args, $depth ) {
+	$classes[] = "depth-$depth";
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'andromeda_nav_menu_classes', 10, 4 );
+
 function andromeda_pre_get_posts( $query ){
 	if ( ! $query->is_main_query() ) {
 		return;
@@ -152,7 +164,6 @@ function andromeda_ping( $comment, $args, $depth ){ ?>
 	</article><!-- .comment-body -->
 <?php
 }
-
 
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	/**
