@@ -71,6 +71,7 @@
 		}
 
 		li {
+			min-width: 100%;
 			border-left: 1px solid $color__border;
 			border-right: 1px solid $color__border;
 
@@ -91,7 +92,8 @@
 
 		a {
 			margin: 7px 0;
-			width: 200px;
+			min-width: 200px;
+			width: 100%;
 
 			&:after {
 				content: '';
