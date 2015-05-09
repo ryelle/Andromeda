@@ -128,6 +128,95 @@ function andromeda_scripts() {
 add_action( 'wp_enqueue_scripts', 'andromeda_scripts' );
 
 /**
+ * Returns the Google font stylesheet URL, if available.
+ *
+ * The use of PT Serif, and Prata by default is
+ * localized. For languages that use characters not supported by either
+ * font, the font can be disabled.
+ *
+ * @return string Font stylesheet or empty string if disabled.
+ */
+function andromeda_google_fonts_url() {
+	$fonts_url = '';
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by PT Serif, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$pt_serif = _x( 'on', 'PT Serif font: on or off', 'andromeda' );
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Prata, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$prata = _x( 'on', 'Prata font: on or off', 'andromeda' );
+
+	if ( 'off' !== $pt_serif || 'off' !== $prata ) {
+		$font_families = array();
+
+		if ( 'off' !== $pt_serif ) {
+			$font_families[] = 'PT+Serif:400'; //Only comes in 400
+		}
+
+		if ( 'off' !== $prata ) {
+			$font_families[] = 'Prata:400';
+		}
+
+		$protocol = is_ssl() ? 'https' : 'http';
+		$query_args = array(
+			'family' => implode( '|', $font_families ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
+	}
+
+	return $fonts_url;
+}
+
+/**
+ * Loads our special font CSS file.
+ *
+ * To disable in a child theme, use remove_action
+ * function mytheme_dequeue_fonts() {
+ *     remove_action( 'wp_enqueue_scripts', 'andromeda_fonts' );
+ * }
+ * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
+ *
+ * @return void
+ */
+function andromeda_fonts() {
+	$fonts_url = andromeda_google_fonts_url();
+	if ( ! empty( $fonts_url ) ) {
+		wp_enqueue_style( 'andromeda-serifs', esc_url_raw( $fonts_url ), array(), null );
+	}
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Aileron, translate this to 'off'. Do not translate into
+	 * your own language.
+	 */
+	$aileron = _x( 'on', 'Aileron font: on or off', 'andromeda' );
+
+	// if ( 'off' !== $aileron ) {
+	// 	$fonts_url = get_template_directory_uri() . '/font/aileron.css';
+	// 	wp_enqueue_style( 'andromeda-sans', esc_url_raw( $fonts_url ), array(), null );
+	// }
+}
+add_action( 'wp_enqueue_scripts', 'andromeda_fonts' );
+
+/**
+ * Enqueue Google fonts style to admin screens for TinyMCE typography dropdown.
+ */
+function andromeda_admin_fonts( $hook_suffix ) {
+	if ( ! in_array( $hook_suffix, array( 'post-new.php', 'post.php' ) ) ) {
+		return;
+	}
+
+	andromeda_fonts();
+
+}
+add_action( 'admin_enqueue_scripts', 'andromeda_admin_fonts' );
+
+/**
  * Load Featured Categories feature.
  */
 require get_template_directory() . '/inc/featured-categories.php';
