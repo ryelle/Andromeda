@@ -126,12 +126,12 @@
 
 	a {
 		color: $color__link-social;
-		@include genericon;
-		margin: 5px 2px 0;
+		@include fa-icon();
+		margin: 1px 2px 0;
 		padding: 0 !important;
 		width: 24px;
-		height: 26px;
-		font-size: 20px;
+		height: 20px;
+		font-size: 16px;
 		overflow: hidden;
 
 		&:before {
@@ -140,34 +140,45 @@
 		}
 	}
 
-	a[href*="github"]:before { @include genericon-github; }
+	a[href*="behance"]:before { content: $fa-var-behance-square; }
+	a[href*="bitbucket"]:before { content: $fa-var-bitbucket-square; }
+	a[href*="codepen"]:before { content: $fa-var-codepen; }
+	a[href*="delicious"]:before { content: $fa-var-delicious; }
+	a[href*="deviantart"]:before { content: $fa-var-deviantart; }
 	a[href*="dribbble"]:before,
-	a[href*="drbl.in"]:before { @include genericon-dribbble; }
-	a[href*="twitter"]:before,
-	a[href*="t.co"]:before { @include genericon-twitter; }
+	a[href*="drbl.in"]:before { content: $fa-var-dribbble; }
 	a[href*="facebook"]:before,
-	a[href*="fb.me"]:before { @include genericon-facebook; }
-	a[href*="wordpress"]:before,
-	a[href*="wp.me"]:before { @include genericon-wordpress; }
-	a[href*="google"]:before { @include genericon-googleplus; }
+	a[href*="fb.me"]:before { content: $fa-var-facebook-square; }
+	a[href*="flickr"]:before { content: $fa-var-flickr; }
+	a[href*="foursquare"]:before { content: $fa-var-foursquare; }
+	a[href*="github"]:before { content: $fa-var-github-square; }
+	a[href*="google"]:before { content: $fa-var-google-plus-square; }
+	a[href*="instagram"]:before { content: $fa-var-instagram; }
+	a[href*="jsfiddle"]:before { content: $fa-var-jsfiddle; }
+	a[href*="last.fm"]:before { content: $fa-var-lastfm-square; }
 	a[href*="linkedin"]:before,
-	a[href*="lnkd.in"]:before { @include genericon-linkedin; }
-	a[href*="pinterest"]:before { @include genericon-pinterest; }
-	a[href*="flickr"]:before { @include genericon-flickr; }
-	a[href*="vimeo"]:before { @include genericon-vimeo; }
+	a[href*="lnkd.in"]:before { content: $fa-var-linkedin-square; }
+	a[href*="medium"]:before { content: $fa-var-medium; }
+	a[href*="paypal"]:before { content: $fa-var-paypal; }
+	a[href*="pinterest"]:before { content: $fa-var-pinterest-square; }
+	a[href*="reddit"]:before { content: $fa-var-reddit-square; }
+	a[href*="skype"]:before { content: $fa-var-skype; }
+	a[href*="slack"]:before { content: $fa-var-slack; }
+	a[href*="slideshare"]:before { content: $fa-var-slideshare; }
+	a[href*="soundcloud"]:before { content: $fa-var-soundcloud; }
+	a[href*="spotify"]:before { content: $fa-var-spotify; }
+	a[href*="steam"]:before { content: $fa-var-steam-square; }
+	a[href*="tumblr"]:before { content: $fa-var-tumblr-square; }
+	a[href*="twitch"]:before { content: $fa-var-twitch; }
+	a[href*="twitter"]:before,
+	a[href*="t.co"]:before { content: $fa-var-twitter-square; }
+	a[href*="vimeo"]:before { content: $fa-var-vimeo-square; }
+	a[href*="vine"]:before { content: $fa-var-vine; }
+	a[href*="wordpress"]:before,
+	a[href*="wp.me"]:before  { content: $fa-var-wordpress; }
+	a[href*="yelp"]:before { content: $fa-var-yelp; }
 	a[href*="youtube"]:before,
-	a[href*="youtu.be"]:before { @include genericon-youtube; }
-	a[href*="tumblr"]:before { @include genericon-tumblr; }
-	a[href*="instagram"]:before { @include genericon-instagram; }
-	a[href*="codepen"]:before { @include genericon-codepen; }
-	a[href*="polldaddy"]:before { @include genericon-polldaddy; }
-	a[href*="path"]:before { @include genericon-path; }
-	a[href*="skype"]:before { @include genericon-skype; }
-	a[href*="digg"]:before { @include genericon-digg; }
-	a[href*="reddit"]:before { @include genericon-reddit; }
-	a[href*="stumbleupon"]:before { @include genericon-stumbleupon; }
-	a[href*="pocket"]:before { @include genericon-pocket; }
-	a[href*="dropbox"]:before { @include genericon-dropbox; }
+	a[href*="youtu.be"]:before { content: $fa-var-youtube-square; }
 }
 
 /* Small menu. */
