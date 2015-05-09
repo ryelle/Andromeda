@@ -1,12 +1,14 @@
 .gallery {
-	margin-bottom: 1.5em;
+	margin: 0 -15px $size__gutter;
 }
 
 .gallery-item {
 	display: inline-block;
+	margin: 0;
+	padding: 15px;
+	width: 100%;
 	text-align: center;
 	vertical-align: top;
-	width: 100%;
 
 	.gallery-columns-2 & {
 		max-width: 50%;
