@@ -5,6 +5,10 @@
 
 @import "../layout/content-sidebar";
 
+body.sidebar-content {
+	@import "../layout/sidebar-content";
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
