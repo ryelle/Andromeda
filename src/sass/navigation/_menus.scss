@@ -135,6 +135,12 @@
 			padding: 0 0 5px;
 			display: block;
 		}
+
+		&:hover,
+		&:focus {
+			color: $color__link-social-hover;
+			text-decoration: none;
+		}
 	}
 
 	a[href*="behance"]:before { content: $fa-var-behance-square; }
