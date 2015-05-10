@@ -22,13 +22,20 @@
 
 	.no-image & {
 		color: white;
-		background-color: $color__background-placeholder;
 		display: table;
 
 		.placeholder {
 			display: table-cell;
+			color: white;
+			background-color: $color__background-placeholder;
 			text-align: center;
 			vertical-align: middle;
+			transition: background-color linear 0.1s;
+
+			&:hover {
+				color: white;
+				background-color: $color__link-hover;
+			}
 		}
 	}
 }
