@@ -12,7 +12,9 @@
 	}
 
 	.entry-image {
+		float: none;
 		margin: 0 0 $size__gutter-2;
+		text-align: center;
 	}
 
 	.entry-content {
