@@ -28,6 +28,22 @@ function andromeda_body_classes( $classes ) {
 add_filter( 'body_class', 'andromeda_body_classes' );
 
 /**
+ * Adds custom classes to the array of post classes.
+ *
+ * @param array $classes Classes for the post element.
+ * @return array
+ */
+function andromeda_post_classes( $classes ) {
+	// Adds a class of group-blog to blogs with more than 1 published author.
+	if ( ! has_post_thumbnail() ) {
+		$classes[] = 'no-image';
+	}
+
+	return $classes;
+}
+add_filter( 'post_class', 'andromeda_post_classes' );
+
+/**
  * Adds custom classes to the array of nav item classes.
  *
  * @param array $classes Classes for the current nav item.
@@ -39,6 +55,9 @@ function andromeda_nav_menu_classes( $classes, $item, $args, $depth ) {
 }
 add_filter( 'nav_menu_css_class', 'andromeda_nav_menu_classes', 10, 4 );
 
+/**
+ * Set the number of posts displayed on the homepage. Set in the customizer.
+ */
 function andromeda_pre_get_posts( $query ){
 	if ( ! $query->is_main_query() ) {
 		return;
@@ -50,6 +69,9 @@ function andromeda_pre_get_posts( $query ){
 }
 add_filter( 'pre_get_posts', 'andromeda_pre_get_posts' );
 
+/**
+ * Make sure to use the paged.php template for older pages on home.
+ */
 function andromeda_home_template( $template ){
 	if ( is_paged() ){
 		$template = locate_template( array( 'paged' ) );
@@ -57,6 +79,43 @@ function andromeda_home_template( $template ){
 	return $template;
 }
 add_filter( 'home_template', 'andromeda_home_template' );
+
+/**
+ * Return an empty div placeholder if there is no featured image.
+ */
+function andromeda_thumbnail_placeholder( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+	global $_wp_additional_image_sizes;
+	if ( '' == $html && isset( $_wp_additional_image_sizes[$size] ) ) {
+		switch ( get_post_format() ) {
+			case 'image':
+				$icon = '<i class="fa fa-camera fa-9x"></i>';
+				break;
+			case 'gallery':
+				$icon = '<i class="fa fa-image fa-9x"></i>';
+				break;
+			case 'audio':
+				$icon = '<i class="fa fa-music fa-9x"></i>';
+				break;
+			case 'video':
+				$icon = '<i class="fa fa-video-camera fa-9x"></i>';
+				break;
+			case 'quote':
+				$icon = '<i class="fa fa-quote-left fa-9x"></i>';
+				break;
+			case 'link':
+				$icon = '<i class="fa fa-link fa-9x"></i>';
+				break;
+			case 'chat':
+				$icon = '<i class="fa fa-comment fa-9x"></i>';
+				break;
+			default:
+				$icon = '<i class="fa fa-pencil fa-9x"></i>';
+		}
+		$html = sprintf( '<div class="placeholder" style="height:%spx;width:%spx;">%s</div>', $_wp_additional_image_sizes[$size]['height'], $_wp_additional_image_sizes[$size]['width'], $icon );
+	}
+	return $html;
+}
+add_filter( 'post_thumbnail_html', 'andromeda_thumbnail_placeholder', 10, 5 );
 
 /**
  * Comment display callback, determine which display function should be used based on comment type.

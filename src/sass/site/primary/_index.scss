@@ -19,6 +19,18 @@
 .entry-image {
 	float: left;
 	margin: -10px 30px 0 0;
+
+	.no-image & {
+		color: white;
+		background-color: $color__background-placeholder;
+		display: table;
+
+		.placeholder {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
 }
 
 .page-links {
