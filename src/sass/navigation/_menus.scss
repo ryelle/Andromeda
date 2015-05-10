@@ -75,10 +75,6 @@
 			border-left: 1px solid $color__border;
 			border-right: 1px solid $color__border;
 
-			&:first-of-type {
-				padding-top: 10px;
-			}
-
 			&:last-of-type {
 				padding-bottom: 10px;
 				border-bottom: 1px solid $color__border;
@@ -91,7 +87,7 @@
 		}
 
 		a {
-			margin: 7px 0;
+			margin: 10px 0;
 			min-width: 200px;
 			width: 100%;
 
@@ -110,7 +106,8 @@
 		}
 
 		a {
-			padding-left: 30px;
+			padding-left: 34px;
+			text-indent: -14px;
 
 			&:before {
 				content: '\2014 ';
