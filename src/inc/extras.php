@@ -88,28 +88,28 @@ function andromeda_thumbnail_placeholder( $html, $post_id, $post_thumbnail_id, $
 	if ( '' == $html && isset( $_wp_additional_image_sizes[$size] ) ) {
 		switch ( get_post_format() ) {
 			case 'image':
-				$icon = '<i class="fa fa-camera fa-9x"></i>';
+				$icon = '<i class="fa fa-camera fa-3x"></i>';
 				break;
 			case 'gallery':
-				$icon = '<i class="fa fa-image fa-9x"></i>';
+				$icon = '<i class="fa fa-image fa-3x"></i>';
 				break;
 			case 'audio':
-				$icon = '<i class="fa fa-music fa-9x"></i>';
+				$icon = '<i class="fa fa-music fa-3x"></i>';
 				break;
 			case 'video':
-				$icon = '<i class="fa fa-video-camera fa-9x"></i>';
+				$icon = '<i class="fa fa-video-camera fa-3x"></i>';
 				break;
 			case 'quote':
-				$icon = '<i class="fa fa-quote-left fa-9x"></i>';
+				$icon = '<i class="fa fa-quote-left fa-3x"></i>';
 				break;
 			case 'link':
-				$icon = '<i class="fa fa-link fa-9x"></i>';
+				$icon = '<i class="fa fa-link fa-3x"></i>';
 				break;
 			case 'chat':
-				$icon = '<i class="fa fa-comment fa-9x"></i>';
+				$icon = '<i class="fa fa-comment fa-3x"></i>';
 				break;
 			default:
-				$icon = '<i class="fa fa-pencil fa-9x"></i>';
+				$icon = '<i class="fa fa-pencil fa-3x"></i>';
 		}
 		$html = sprintf( '<div class="placeholder" style="height:%spx;width:%spx;">%s</div>', $_wp_additional_image_sizes[$size]['height'], $_wp_additional_image_sizes[$size]['width'], $icon );
 	}
