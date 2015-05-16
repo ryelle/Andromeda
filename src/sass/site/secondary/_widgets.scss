@@ -47,14 +47,14 @@
 	margin-top: $size__gutter-3;
 	.widget {
 		float: left;
-		width: 440px;
+		width: $size__width-widget-main;
 
 		&:nth-of-type(3n+2) {
 			margin: 0 60px 0 40px;
 		}
 
 		&:nth-of-type(3n+3) {
-			width: 300px;
+			width: $size__width-widget-end;
 		}
 	}
 }
