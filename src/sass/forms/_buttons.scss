@@ -7,12 +7,9 @@ input[type="submit"] {
 	border-color: $color__border-button;
 	background: $color__background-button;
 	color: $color__text-button;
-	font-family: $font__header;
+	@include smallcaps;
 	@include font-size( 1.2 );
 	font-weight: bold;
-	text-transform: uppercase;
-	line-height: 1;
-	letter-spacing: 1px;
 	transition: background-color linear 0.1s;
 
 	&:hover {

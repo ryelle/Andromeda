@@ -14,3 +14,11 @@ $font__size-h4: 1.6;
 
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+@mixin smallcaps {
+	font-family: $font__header;
+	@include font-size( $font__size-h3 );
+	text-transform: uppercase;
+	line-height: 1;
+	letter-spacing: 1px;
+}

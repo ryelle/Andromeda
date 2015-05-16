@@ -21,12 +21,8 @@ h3,
 .comment-reply-title,
 .section-title,
 .posts-navigation {
-	font-family: $font__header;
-	@include font-size( $font__size-h3 );
+	@include smallcaps;
 	font-weight: bold;
-	text-transform: uppercase;
-	line-height: 1;
-	letter-spacing: 1px;
 }
 
 h4, h5, h6 {

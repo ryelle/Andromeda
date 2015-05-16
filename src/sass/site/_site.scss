@@ -21,11 +21,9 @@
 	margin-bottom: $size__gutter-3;
 	padding-top: $size__gutter-2;
 	border-top: 1px solid $color__border;
-	font-family: $font__header;
+	@include smallcaps;
 	color: $color__text-footer;
 	@include font-size( 1.4 );
-	text-transform: uppercase;
-	letter-spacing: 1px;
 
 	a:link, a:visited {
 		color: $color__text-footer;

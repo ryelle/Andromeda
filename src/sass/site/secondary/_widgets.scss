@@ -15,6 +15,32 @@
 	select {
 		max-width: 100%;
 	}
+
+	&.widget_rss li {
+		margin-bottom: 10px;
+	}
+	.rssSummary {
+		margin: 5px 0;
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	&.widget_calendar {
+		caption, #prev, #next {
+			@include smallcaps;
+			font-weight: bold;
+		}
+		caption {
+			margin-bottom: $size__gutter;
+		}
+		tbody {
+			text-align: right;
+		}
+		#prev a, #next a {
+			display: block;
+			margin-top: $size__gutter;
+		}
+	}
 }
 
 .footer-widgets {

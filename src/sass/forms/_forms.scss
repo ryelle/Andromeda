@@ -4,12 +4,9 @@
 
 .comment-form {
 	label {
-		font-family: $font__header;
+		@include smallcaps;
 		@include font-size( 1.2 );
 		font-weight: bold;
-		text-transform: uppercase;
-		line-height: 1;
-		letter-spacing: 1px;
 	}
 
 	.comment-form-author,

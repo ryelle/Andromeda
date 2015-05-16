@@ -56,11 +56,9 @@
 	a {
 		display: inline-block;
 		padding: 10px 30px;
-		font-family: $font__header;
+		@include smallcaps;
 		@include font-size( 1.2 );
-		letter-spacing: 1px;
 		font-weight: bold;
-		text-transform: uppercase;
 		border: 1px solid $color__border;
 	}
 }
