@@ -40,3 +40,16 @@
 		text-align: right;
 	}
 }
+
+.post-password-form {
+	input[type="password"] {
+		width: 25%;
+		min-width: 300px;
+	}
+	input[type="submit"] {
+		position: relative;
+		top: -2px;
+		padding-top: 11px;
+		padding-bottom: 10px;
+	}
+}
