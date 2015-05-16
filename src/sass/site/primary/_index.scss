@@ -26,14 +26,14 @@
 
 		.placeholder {
 			display: table-cell;
-			color: white;
+			color: $color__text-placeholder;
 			background-color: $color__background-placeholder;
 			text-align: center;
 			vertical-align: middle;
 			transition: background-color linear 0.1s;
 
 			&:hover {
-				color: white;
+				color: $color__text-placeholder;
 				background-color: $color__link-hover;
 			}
 		}
