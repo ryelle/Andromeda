@@ -11,7 +11,7 @@
  * Display an excerpt of a given length.
  * REQUIRES PHP 5.3+ :(
  */
-function andromeda_excerpt( $length = 45 ) {
+function andromeda_excerpt( $length = 35 ) {
 	$text = get_the_content('');
 	$text = strip_shortcodes( $text );
 
