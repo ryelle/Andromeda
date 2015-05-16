@@ -155,7 +155,7 @@ function andromeda_google_fonts_url() {
 		$font_families = array();
 
 		if ( 'off' !== $pt_serif ) {
-			$font_families[] = 'PT+Serif:400'; //Only comes in 400
+			$font_families[] = 'PT+Serif:400,400italic,700';
 		}
 
 		if ( 'off' !== $prata ) {
