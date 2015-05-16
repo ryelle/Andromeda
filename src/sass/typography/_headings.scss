@@ -4,6 +4,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	@include font-size( $font__size-h1 );
+
+	.entry-content & {
+		@include font-size( $font__size-h1-content );
+	}
 }
 
 h2 {
@@ -25,7 +29,7 @@ h3,
 	letter-spacing: 1px;
 }
 
-h4 {
+h4, h5, h6 {
 	@include font-size( $font__size-h4 );
 }
 
