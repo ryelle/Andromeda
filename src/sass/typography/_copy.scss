@@ -83,3 +83,18 @@ big {
 		margin-top: 0;
 	}
 }
+
+.entry-content table,
+.widget table {
+	th {
+		padding: 5px 5px 2px;
+		font-family: $font__header;
+		@include font-size( $font__size-h3 );
+		text-transform: uppercase;
+		line-height: 1;
+		letter-spacing: 1px;
+	}
+	td {
+		padding: 5px;
+	}
+}
