@@ -1,6 +1,8 @@
 .site {
 	margin: 0 auto;
+	padding: 0 $size__gutter-2;
 	max-width: $size__width-main;
+	box-sizing: content-box;
 }
 
 @import "../layout/content-sidebar";
