@@ -54,11 +54,11 @@
 	.hentry {
 		float: left;
 		margin: 0 $size__gutter $size__gutter-2;
-		width: $size__width-4up;
+		width: calc( #{$size__width-4up} - 30px );
 	}
 	.hentry:nth-of-type(1),
 	.hentry:nth-of-type(2) {
-		width: $size__width-2up;
+		width: calc( #{$size__width-2up} - #{$size__gutter} );
 	}
 
 	.hentry:nth-of-type(1),
@@ -101,7 +101,7 @@
 		clear: none;
 		float: left;
 		margin: 0 $size__gutter $size__gutter-2;
-		width: $size__width-2up;
+		width: calc( #{$size__width-2up} - #{$size__gutter} );
 
 		.entry-title {
 			margin-top: 10px;
@@ -126,7 +126,7 @@
 		clear: none;
 		float: left;
 		margin: 0 $size__gutter $size__gutter-2;
-		width: $size__width-4up;
+		width: calc( #{$size__width-4up} - #{$size__gutter} );
 
 		.entry-title {
 			margin-top: 10px;
