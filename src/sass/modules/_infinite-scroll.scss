@@ -8,3 +8,29 @@
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+#page #infinite-handle {
+	clear: both;
+	margin-top: $size__gutter-2 + 19px;
+	border-top: 1px solid $color__border;
+
+	span {
+		float: right;
+		display: block;
+		margin-top: -19px;
+		padding: 0;
+		width: 50%;
+		background-color: transparent;
+		text-align: right;
+
+		button,
+		button:hover,
+		button:focus {
+			display: inline-block;
+			padding: 10px 30px;
+			color: $color__text-main;
+			background-color: $color__background-body;
+			border: 1px solid $color__border;
+		}
+	}
+}

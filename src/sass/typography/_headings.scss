@@ -20,7 +20,8 @@ h3,
 .comments-title,
 .comment-reply-title,
 .section-title,
-.posts-navigation {
+.posts-navigation,
+#page #infinite-handle button {
 	@include smallcaps;
 	font-weight: bold;
 }

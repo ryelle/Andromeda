@@ -11,11 +11,12 @@
  * See: http://jetpack.me/support/infinite-scroll/
  */
 function andromeda_jetpack_setup() {
-	// add_theme_support( 'infinite-scroll', array(
-	// 	'container' => 'main',
-	// 	'render'    => 'andromeda_infinite_scroll_render',
-	// 	'footer'    => 'page',
-	// ) );
+	add_theme_support( 'infinite-scroll', array(
+		'container' => 'main',
+		'type'      => 'click',
+		'render'    => 'andromeda_infinite_scroll_render',
+		'footer'    => 'page',
+	) );
 
 	add_theme_support( 'featured-content', array(
 		'filter'     => 'andromeda_get_featured_content',
@@ -25,10 +26,28 @@ function andromeda_jetpack_setup() {
 }
 add_action( 'after_setup_theme', 'andromeda_jetpack_setup' );
 
+/**
+ * Only enable infinite scroll on archive pages.
+ *
+ * @param  bool   $supported  True IS is already supported
+ * @param  array  $settings   Configuration for infinite scroll
+ * @return bool   True if IS should be enabled
+ */
+function andromeda_remove_infinite_scroll( $supported, $settings ) {
+	if ( ! is_archive() ) {
+		$supported = false;
+	}
+	return $supported;
+}
+add_filter( 'infinite_scroll_archive_supported', 'andromeda_remove_infinite_scroll', 10, 2 );
+
+/**
+ * Custom render function for Infinite Scroll.
+ */
 function andromeda_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', get_post_format() );
+		get_template_part( 'partial/content', get_post_format() );
 	}
 } // end function andromeda__infinite_scroll_render
 
