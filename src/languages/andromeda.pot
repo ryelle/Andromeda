@@ -43,154 +43,219 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:35 comments.php:56
+#: comments.php:46
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:38 comments.php:59
+#: comments.php:49
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:39 comments.php:60
+#: comments.php:50
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:72
+#: comments.php:62
 msgid "Comments are closed."
 msgstr ""
 
-#: content-none.php:13
-msgid "Nothing Found"
-msgstr ""
-
-#: content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
-#: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-
-#: content-page.php:18 content-single.php:20
-msgid "Pages:"
-msgstr ""
-
-#: content-page.php:25 inc/template-tags.php:137
-msgid "Edit"
-msgstr ""
-
-#: footer.php:15
+#: footer.php:17
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: footer.php:15
+#: footer.php:17
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:17
+#: footer.php:19
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:54 header.php:31
+#: functions.php:57 header.php:31
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:89
+#: functions.php:58
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:93
 msgid "Sidebar"
+msgstr ""
+
+#: functions.php:103
+msgid "Footer"
 msgstr ""
 
 #: header.php:22
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:52
+#: home.php:27
+msgid "Recent Posts"
+msgstr ""
+
+#: home.php:49
+msgid "See all recent posts"
+msgstr ""
+
+#: inc/comments.php:47 inc/comments.php:96 inc/template-tags.php:175
+#: partial/content-page.php:27
+msgid "Edit"
+msgstr ""
+
+#: inc/comments.php:58
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/customizer.php:19
+msgid "Front Page Setup"
+msgstr ""
+
+#: inc/customizer.php:29
+msgid "Number of posts on homepage"
+msgstr ""
+
+#: inc/customizer.php:33
+msgid "recommeded to be 3"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "First featured category"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "Second featured category"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "Third featured category"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Copyright"
+msgstr ""
+
+#: inc/customizer.php:75
+msgid "Shown on the right in the footer."
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: inc/extras.php:146
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:34
+#: inc/template-tags.php:29
+msgid "Continue reading %s"
+msgstr ""
+
+#: inc/template-tags.php:48
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:38
+#: inc/template-tags.php:52
 msgid "Older posts"
 msgstr ""
 
-#: inc/template-tags.php:42
+#: inc/template-tags.php:56
 msgid "Newer posts"
 msgstr ""
 
-#: inc/template-tags.php:67
+#: inc/template-tags.php:81
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:119 inc/template-tags.php:125
+#: inc/template-tags.php:148 inc/template-tags.php:163
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:121
-msgid "Posted in %1$s"
+#: inc/template-tags.php:150
+msgid "in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:127
+#: inc/template-tags.php:165
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:133
+#: inc/template-tags.php:171
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:133
+#: inc/template-tags.php:171
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:133
+#: inc/template-tags.php:171
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:154
+#: inc/template-tags.php:193
 msgid "Category: %s"
 msgstr ""
 
-#: inc/template-tags.php:156
+#: inc/template-tags.php:195
 msgid "Tag: %s"
 msgstr ""
 
-#: inc/template-tags.php:158
+#: inc/template-tags.php:197
 msgid "Author: %s"
 msgstr ""
 
-#: inc/template-tags.php:160
+#: inc/template-tags.php:199
 msgid "Year: %s"
 msgstr ""
 
-#: inc/template-tags.php:162
+#: inc/template-tags.php:201
 msgid "Month: %s"
 msgstr ""
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:203
 msgid "Day: %s"
 msgstr ""
 
-#: inc/template-tags.php:186
+#: inc/template-tags.php:225
 msgid "Archives: %s"
 msgstr ""
 
-#: inc/template-tags.php:190
+#: inc/template-tags.php:229
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: inc/template-tags.php:192
+#: inc/template-tags.php:231
 msgid "Archives"
+msgstr ""
+
+#: partial/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: partial/content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: partial/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: partial/content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: partial/content-page.php:20 partial/content-single.php:18
+msgid "Pages:"
+msgstr ""
+
+#: partial/featured-category.php:29
+msgid "See all %s"
 msgstr ""
 
 #: search.php:16
@@ -219,77 +284,106 @@ msgstr ""
 
 #: comments.php:28
 msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgid "One comment so far"
+msgid_plural "%1$s comments so far"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/template-tags.php:97
+#: functions.php:146
+#. Translators: If there are characters in your language that are not
+#. * supported by PT Serif, translate this to 'off'. Do not translate
+#. * into your own language.
+msgctxt "PT Serif font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:152
+#. Translators: If there are characters in your language that are not
+#. * supported by Prata, translate this to 'off'. Do not translate
+#. * into your own language.
+msgctxt "Prata font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:197
+#. Translators: If there are characters in your language that are not
+#. * supported by Aileron, translate this to 'off'. Do not translate into
+#. * your own language.
+msgctxt "Aileron font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/comments.php:44 inc/comments.php:93
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:106
 msgctxt "post date"
-msgid "Posted on %s"
+msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:102
-msgctxt "post author"
-msgid "by %s"
+#: inc/template-tags.php:134
+msgctxt "post date"
+msgid "Posted %s"
 msgstr ""
 
-#: inc/template-tags.php:160
+#: inc/template-tags.php:199
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/template-tags.php:162
+#: inc/template-tags.php:201
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:203
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:167
+#: inc/template-tags.php:206
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/template-tags.php:169
+#: inc/template-tags.php:208
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/template-tags.php:171
+#: inc/template-tags.php:210
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/template-tags.php:173
+#: inc/template-tags.php:212
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/template-tags.php:175
+#: inc/template-tags.php:214
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/template-tags.php:177
+#: inc/template-tags.php:216
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/template-tags.php:179
+#: inc/template-tags.php:218
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/template-tags.php:181
+#: inc/template-tags.php:220
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/template-tags.php:183
+#: inc/template-tags.php:222
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
