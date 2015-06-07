@@ -19,13 +19,28 @@
 .entry-image {
 	float: left;
 	margin: -10px 30px 0 0;
+	max-width: 50%;
 
 	.no-image & {
 		color: white;
-		display: table;
+
+		a {
+			position: relative;
+			display: block;
+			&:before {
+				display: block;
+				content: "";
+				width: 100%;
+				padding-top: 75%;
+			}
+		}
 
 		.placeholder {
-			display: table-cell;
+			position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
 			color: $color__text-placeholder;
 			background-color: $color__background-placeholder;
 			text-align: center;
@@ -35,6 +50,17 @@
 			&:hover {
 				color: $color__text-placeholder;
 				background-color: $color__link-hover;
+			}
+		}
+
+		i {
+			display: table;
+			height: 100%;
+			width: 100%;
+
+			&:before {
+				display: table-cell;
+				vertical-align: middle;
 			}
 		}
 	}
@@ -85,6 +111,7 @@
 	.entry-image {
 		float: none;
 		margin: 0 0 10px 0;
+		max-width: 100%;
 	}
 
 	.entry-content p {

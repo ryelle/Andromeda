@@ -111,7 +111,7 @@ function andromeda_thumbnail_placeholder( $html, $post_id, $post_thumbnail_id, $
 			default:
 				$icon = '<i class="fa fa-pencil fa-3x"></i>';
 		}
-		$html = sprintf( '<div class="placeholder" style="height:%spx;width:%spx;">%s</div>', $_wp_additional_image_sizes[$size]['height'], $_wp_additional_image_sizes[$size]['width'], $icon );
+		$html = sprintf( '<div style="width:%spx;"><span class="placeholder">%s</span></div>', $_wp_additional_image_sizes[$size]['width'], $icon );
 	}
 	return $html;
 }
