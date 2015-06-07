@@ -88,8 +88,10 @@
 
 		a {
 			margin: 10px 0;
-			min-width: 200px;
+			padding: 0 20px;
+			min-width: 250px;
 			width: 100%;
+			box-sizing: border-box;
 
 			&:after {
 				content: '';
