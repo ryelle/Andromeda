@@ -46,11 +46,6 @@
 			text-align: center;
 			vertical-align: middle;
 			transition: background-color linear 0.1s;
-
-			&:hover {
-				color: $color__text-placeholder;
-				background-color: $color__link-hover;
-			}
 		}
 
 		i {
@@ -63,6 +58,16 @@
 				vertical-align: middle;
 			}
 		}
+	}
+
+	a:hover .placeholder,
+	a:focus .placeholder {
+		color: $color__text-placeholder;
+		background-color: $color__link-hover;
+	}
+
+	a:focus img {
+		box-shadow: 0 3px 0 $color__link-hover;
 	}
 }
 
