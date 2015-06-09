@@ -18,6 +18,7 @@ function andromeda_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'andromeda_settings' , array(
 		'title'      => __( 'Front Page Setup', 'andromeda' ),
 		'priority'   => 30,
+		'description' => sprintf( __( 'These settings only affect your home page, %s', 'andromeda' ), esc_url_raw( home_url() ) ),
 	) );
 
 	// home-per-page: number
@@ -26,11 +27,11 @@ function andromeda_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'absint',
 	) );
 	$wp_customize->add_control( 'home-per-page', array(
-		'label'       => __( 'Number of posts on homepage', 'andromeda' ),
+		'label'       => __( 'Number of recent posts', 'andromeda' ),
 		'section'     => 'andromeda_settings',
 		'type'        => 'number',
 		'input_attrs' => array( 'min' => 1, 'max' => 10 ),
-		'description' => __( 'recommeded to be 3', 'andromeda' ),
+		'description' => __( 'We reccomend 3.', 'andromeda' ),
 	) );
 
 	// first-home-category: cat dropdown
@@ -72,7 +73,7 @@ function andromeda_customize_register( $wp_customize ) {
 		'label'       => __( 'Copyright', 'andromeda' ),
 		'section'     => 'andromeda_settings',
 		'type'        => 'text',
-		'description' => __( 'Shown on the right in the footer.', 'andromeda' ),
+		'description' => __( 'Appears in the footer.', 'andromeda' ),
 	) );
 }
 add_action( 'customize_register', 'andromeda_customize_register' );

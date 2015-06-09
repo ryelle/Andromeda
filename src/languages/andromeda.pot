@@ -79,11 +79,11 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:96
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:106
 msgid "Footer"
 msgstr ""
 
@@ -112,35 +112,39 @@ msgstr ""
 msgid "Front Page Setup"
 msgstr ""
 
-#: inc/customizer.php:29
-msgid "Number of posts on homepage"
+#: inc/customizer.php:21
+msgid "These settings only affect your home page, %s"
 msgstr ""
 
-#: inc/customizer.php:33
-msgid "recommeded to be 3"
+#: inc/customizer.php:30
+msgid "Number of recent posts"
 msgstr ""
 
-#: inc/customizer.php:42
+#: inc/customizer.php:34
+msgid "We reccomend 3."
+msgstr ""
+
+#: inc/customizer.php:43
 msgid "First featured category"
 msgstr ""
 
-#: inc/customizer.php:52
+#: inc/customizer.php:53
 msgid "Second featured category"
 msgstr ""
 
-#: inc/customizer.php:62
+#: inc/customizer.php:63
 msgid "Third featured category"
 msgstr ""
 
-#: inc/customizer.php:72
+#: inc/customizer.php:73
 msgid "Copyright"
 msgstr ""
 
-#: inc/customizer.php:75
-msgid "Shown on the right in the footer."
+#: inc/customizer.php:76
+msgid "Appears in the footer."
 msgstr ""
 
-#: inc/customizer.php:105
+#: inc/customizer.php:106
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
@@ -289,7 +293,7 @@ msgid_plural "%1$s comments so far"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:146
+#: functions.php:149
 #. Translators: If there are characters in your language that are not
 #. * supported by PT Serif, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -297,7 +301,7 @@ msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:152
+#: functions.php:155
 #. Translators: If there are characters in your language that are not
 #. * supported by Prata, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -305,7 +309,7 @@ msgctxt "Prata font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:200
 #. Translators: If there are characters in your language that are not
 #. * supported by Aileron, translate this to 'off'. Do not translate into
 #. * your own language.
