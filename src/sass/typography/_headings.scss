@@ -26,8 +26,14 @@ h3,
 	font-weight: bold;
 }
 
-h4, h5, h6 {
+h4 {
 	@include font-size( $font__size-h4 );
+}
+
+h5, h6 {
+	@include font-size( $font__size-h5 );
+	text-transform: uppercase;
+	letter-spacing: .04em;
 }
 
 .site-header {
