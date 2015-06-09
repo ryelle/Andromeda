@@ -32,12 +32,8 @@
 		text-decoration: underline;
 	}
 
-	.site-info {
-		float: left;
-	}
-
-	.site-copyright {
-		float: right;
+	.site-info + .site-copyright {
+		margin-top: $size__gutter;
 	}
 }
 
