@@ -1,0 +1,27 @@
+/*
+ Editor styles for Andromeda
+ */
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+	font-size: 62.5%;
+}
+
+body {
+	-webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+@import "typography/typography";
+@import "elements/elements";
+@import "modules/alignments";
+@import "navigation/links";
+@import "media/media";
+
+// Resize to match the resized h1 in entry-content.
+.wp-editor h1 {
+	@include font-size( $font__size-h1-content );
+}

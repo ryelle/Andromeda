@@ -79,6 +79,9 @@ function andromeda_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Style the content in TinyMCE
+	add_editor_style();
 }
 endif; // andromeda_setup
 add_action( 'after_setup_theme', 'andromeda_setup' );
