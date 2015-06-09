@@ -87,8 +87,10 @@ big {
 .entry-content table,
 .widget table {
 	th {
-		padding: 5px 5px 2px;
+		padding: 5px 5px 10px;
+		border-bottom: 1px solid $color__border-th;
 		@include smallcaps;
+		text-align: left;
 	}
 	td {
 		padding: 5px;
