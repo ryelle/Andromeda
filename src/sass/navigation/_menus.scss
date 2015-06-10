@@ -124,6 +124,12 @@
 	top: 0;
 	left: 0;
 
+	.overlapped & {
+		position: static;
+		display: inline-block;
+		margin-bottom: $size__gutter/2;
+	}
+
 	a {
 		color: $color__link-social;
 		@include fa-icon();

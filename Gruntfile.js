@@ -92,11 +92,11 @@ module.exports = function(grunt) {
 
 		concat: {
 			dev: {
-				src: [ SOURCE_DIR + 'js/src/*.js' ],
+				src: [ SOURCE_DIR + 'js/src/lib.*.js', SOURCE_DIR + 'js/src/*.js' ],
 				dest: SOURCE_DIR + 'js/' + THEME_NAME + '.js',
 			},
 			dist: {
-				src: [ SOURCE_DIR + 'js/src/*.js' ],
+				src: [ SOURCE_DIR + 'js/src/lib.*.js', SOURCE_DIR + 'js/src/*.js' ],
 				dest: BUILD_DIR + 'js/' + THEME_NAME + '.js',
 			}
 		},

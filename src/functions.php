@@ -5,6 +5,14 @@
  * @package Andromeda
  */
 
+if ( ! defined( 'ANDROMEDA_VERSION' ) ) {
+	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+		define( 'ANDROMEDA_VERSION', time() );
+	} else {
+		define( 'ANDROMEDA_VERSION', '1.0' );
+	}
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -118,10 +126,10 @@ add_action( 'widgets_init', 'andromeda_widgets_init' );
  * Enqueue scripts and styles.
  */
 function andromeda_scripts() {
-	wp_enqueue_style( 'andromeda-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'andromeda-style', get_stylesheet_uri(), array(), ANDROMEDA_VERSION );
 
+	wp_enqueue_script( 'andromeda-scripts', get_template_directory_uri() . '/js/andromeda.js', array( 'jquery' ), ANDROMEDA_VERSION, true );
 	wp_enqueue_script( 'andromeda-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
 	wp_enqueue_script( 'andromeda-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
