@@ -27,6 +27,8 @@ get_header(); ?>
 			<h1 class="page-title"><?php _e( 'Recent Posts', 'andromeda' ); ?></h1>
 		</header><!-- .page-header -->
 
+		<div class="recent-posts">
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -56,6 +58,8 @@ get_header(); ?>
 			<?php get_template_part( 'partial/content', 'none' ); ?>
 
 		<?php endif; ?>
+
+		</div><!-- /.recent-posts -->
 
 		<?php
 			// Include the category sections
