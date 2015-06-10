@@ -1,4 +1,8 @@
 
-@media screen and (max-width: 1024px) {
-	//
+@media screen and (max-width: 950px) {
+	.recent-posts .entry-image {
+		float: none;
+		margin-right: 0;
+		max-width: 100%;
+	}
 }
