@@ -71,19 +71,19 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:57 header.php:31
+#: functions.php:65 header.php:31
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:58
+#: functions.php:66
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:104
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:114
 msgid "Footer"
 msgstr ""
 
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Recent Posts"
 msgstr ""
 
-#: home.php:49
+#: home.php:51
 msgid "See all recent posts"
 msgstr ""
 
@@ -293,7 +293,7 @@ msgid_plural "%1$s comments so far"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:149
+#: functions.php:157
 #. Translators: If there are characters in your language that are not
 #. * supported by PT Serif, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -301,7 +301,7 @@ msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:155
+#: functions.php:163
 #. Translators: If there are characters in your language that are not
 #. * supported by Prata, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -309,7 +309,7 @@ msgctxt "Prata font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:208
 #. Translators: If there are characters in your language that are not
 #. * supported by Aileron, translate this to 'off'. Do not translate into
 #. * your own language.
