@@ -207,10 +207,10 @@ function andromeda_fonts() {
 	 */
 	$aileron = _x( 'on', 'Aileron font: on or off', 'andromeda' );
 
-	// if ( 'off' !== $aileron ) {
-	// 	$fonts_url = get_template_directory_uri() . '/font/aileron.css';
-	// 	wp_enqueue_style( 'andromeda-sans', esc_url_raw( $fonts_url ), array(), null );
-	// }
+	if ( 'off' !== $aileron ) {
+		$fonts_url = get_template_directory_uri() . '/font/aileron/font.css';
+		wp_enqueue_style( 'andromeda-sans', esc_url_raw( $fonts_url ), array(), null );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'andromeda_fonts' );
 
