@@ -10,6 +10,9 @@ $in_featured = true;
 
 <div id="featured-content" class="featured-content">
 	<div class="featured-content-inner">
+		<header class="section-header">
+			<h1 class="section-title"><?php _e( 'Featured Post', 'andromeda' ); ?></h1>
+		</header><!-- .page-header -->
 	<?php
 		$featured_posts = andromeda_get_featured_posts();
 		foreach ( (array) $featured_posts as $order => $post ) :

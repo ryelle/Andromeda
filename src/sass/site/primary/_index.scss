@@ -18,7 +18,7 @@
 
 .entry-image {
 	float: left;
-	margin: -10px 30px 0 0;
+	margin: -10px 30px $size__gutter 0;
 	max-width: 50%;
 
 	.no-image & {
@@ -73,6 +73,12 @@
 
 .page-links {
 	clear: both;
+}
+
+.featured-content {
+	.section-header {
+		display: none;
+	}
 }
 
 .featured-category {

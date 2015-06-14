@@ -3,6 +3,7 @@
 	.home .recent-posts .entry-image,
 	.archive .site-main .entry-image {
 		float: none;
+		margin-left: 0;
 		margin-right: 0;
 		max-width: 100%;
 	}
@@ -45,6 +46,26 @@
 			.entry-content {
 				display: none;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.featured-content {
+		.section-header {
+			display: block;
+
+			.section-title {
+				margin-top: -20px; // Pull up towards the navigation
+				margin-bottom: 10px; // To account for the offset image
+				padding: 0 0 50px;
+			}
+		}
+
+		.entry-image {
+			margin-left: 0;
+			margin-right: 0;
+			max-width: 100%;
 		}
 	}
 }
