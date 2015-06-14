@@ -23,6 +23,10 @@ function andromeda_body_classes( $classes ) {
 		$classes[] = 'singular';
 	}
 
+	if ( is_home() && ! andromeda_has_featured_posts() ) {
+		$classes[] = 'no-featured-posts';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'andromeda_body_classes' );

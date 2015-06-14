@@ -2,6 +2,14 @@
 
 .site-main {
 	border-top: 1px solid $color__border;
+
+	.no-featured-posts & {
+		border-top: none;
+
+		.page-header {
+			padding-top: 0;
+		}
+	}
 }
 
 .page-header {
