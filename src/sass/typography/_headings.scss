@@ -17,6 +17,7 @@ h2 {
 
 h3,
 .page-title,
+.search-title,
 .comments-title,
 .comment-reply-title,
 .section-title,
@@ -71,7 +72,8 @@ h5, h6 {
 
 .page-title,
 .entry-title,
-.widget-title {
+.widget-title,
+.search-title {
 	margin-top: 0;
 	line-height: 1.2;
 }
@@ -85,6 +87,10 @@ h5, h6 {
 	margin: 0 0 $size__gutter-2;
 	@include font-size( 6.4 );
 	line-height: 1.2;
+}
+
+.search-title {
+	margin: 0 0 $size__gutter-2;
 }
 
 @media screen and (max-width: 600px) {

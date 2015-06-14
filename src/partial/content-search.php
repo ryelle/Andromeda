@@ -22,8 +22,4 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php andromeda_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
