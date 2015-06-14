@@ -66,3 +66,37 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+/* Media Queries */
+@media screen and (max-width: 799px) {
+	.widget-area {
+		margin-top: $size__gutter-2;
+	}
+	.widget {
+		float: left !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		width: calc( 50% - #{$size__gutter} ) !important;
+
+		&:nth-of-type( odd ) {
+			clear: left !important;
+			margin-right: $size__gutter !important;
+		}
+		&:nth-of-type( even ) {
+			margin-left: $size__gutter !important;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.widget {
+		float: none !important;
+		width: 100% !important;
+
+		&:nth-of-type( odd ),
+		&:nth-of-type( even ) {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+}

@@ -3,6 +3,10 @@
 	padding: 0 $size__gutter-2;
 	max-width: $size__width-main;
 	box-sizing: content-box;
+
+	@media screen and (max-width: 450px) {
+		padding: 0 $size__gutter;
+	}
 }
 
 @import "../layout/content-sidebar";

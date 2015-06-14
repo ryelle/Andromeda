@@ -1,8 +1,50 @@
 
-@media screen and (max-width: 950px) {
-	.recent-posts .entry-image {
+@media screen and (max-width: 1000px) and (min-width: 800px), screen and (max-width: 600px) {
+	.home .recent-posts .entry-image,
+	.archive .site-main .entry-image {
 		float: none;
 		margin-right: 0;
 		max-width: 100%;
+	}
+
+	.featured-category {
+		.section-title {
+			margin-top: 10px;
+		}
+
+		&.six-up,
+		&.four-up,
+		&.three-up,
+		&.two-up {
+			.hentry {
+				float: none;
+				clear: left;
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: $size__gutter-2;
+				width: #{$size__width-1up};
+
+				&:before,
+				&:after {
+					@include clearfix;
+				}
+				&:after {
+					@include clearfix-after;
+				}
+			}
+			.entry-image {
+				box-sizing: border-box;
+				float: left;
+				padding-right: 30px;
+				max-width: 50%;
+			}
+			.entry-header {
+				float: left;
+				max-width: 50%;
+			}
+			.entry-content {
+				display: none;
+			}
+		}
 	}
 }

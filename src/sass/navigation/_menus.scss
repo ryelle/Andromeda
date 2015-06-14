@@ -229,6 +229,14 @@
 		background-color: $color__background-body;
 		border: 1px solid $color__border;
 	}
+
+	@media screen and (max-width: 1000px) and (min-width: 800px), screen and (max-width: 600px) {
+		.nav-next,
+		.nav-previous {
+			float: none;
+			width: 100%;
+		}
+	}
 }
 
 .comment-navigation,
@@ -236,6 +244,12 @@
 	.site-main & {
 		margin: 0 0 $size__gutter-2;
 		overflow: hidden;
+	}
+
+	@media screen and (max-width: 1000px) and (min-width: 800px), screen and (max-width: 600px) {
+		.nav-previous + .nav-next {
+			margin-top: $size__gutter;
+		}
 	}
 }
 

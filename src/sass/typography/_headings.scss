@@ -80,4 +80,9 @@ h5, h6 {
 .singular .entry-title {
 	margin: 0 0 $size__gutter-2;
 	@include font-size( 6.4 );
+	line-height: 1.2;
+
+	@media screen and (max-width: 600px) {
+		@include font-size( 4.6 );
+	}
 }
