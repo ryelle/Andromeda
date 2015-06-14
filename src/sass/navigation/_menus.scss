@@ -11,7 +11,7 @@
 	text-transform: uppercase;
 
 	ul {
-		display: none;
+		display: block;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -194,18 +194,55 @@
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.menu-toggle {
+	display: none;
+	margin: 0 auto $size__gutter;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
+@media screen and (max-width: 600px) {
+	.main-navigation ul {
 		display: none;
 	}
-	.main-navigation ul {
+
+	.menu-toggle,
+	.main-navigation.toggled ul {
 		display: block;
 	}
+
+	#primary-menu {
+		text-align: left;
+
+		li {
+			display: block;
+			border: none !important;
+		}
+
+		a {
+			padding: 5px 0;
+			&:after {
+				content: '';
+				padding: 0;
+			}
+		}
+
+		.depth-0 > ul {
+			position: static;
+			top: auto;
+			left: auto;
+			z-index: 0;
+			background-color: transparent;
+
+			&:before {
+				content: '';
+				height: 0px;
+			}
+
+			li {
+				border: none;
+			}
+		}
+	}
+
 }
 
 .comment-navigation,
