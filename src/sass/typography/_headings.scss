@@ -53,6 +53,10 @@ h5, h6 {
 	a {
 		text-decoration: none;
 	}
+
+	@media screen and (max-width: 600px) {
+		@include font-size( 4.6 );
+	}
 }
 
 .site-description {
