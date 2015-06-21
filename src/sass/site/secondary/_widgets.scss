@@ -2,11 +2,6 @@
 	padding: $size__gutter 0 $size__gutter-3;
 	border-top: 1px solid $color__border;
 
-	.no-featured-posts &:first-of-type {
-		padding-top: 0;
-		border-top: none;
-	}
-
 	.widget-title {
 		margin-bottom: $size__gutter-3;
 	}
@@ -73,6 +68,12 @@
 }
 
 /* Media Queries */
+@media screen and (min-width: 800px) {
+	.no-featured-posts .sidebar-widgets .widget:first-of-type {
+		padding-top: 0;
+		border-top: none;
+	}
+}
 @media screen and (max-width: 799px) {
 	.widget-area {
 		margin-top: $size__gutter-2;
