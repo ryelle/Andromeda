@@ -228,24 +228,10 @@ function andromeda_admin_fonts( $hook_suffix ) {
 add_action( 'admin_enqueue_scripts', 'andromeda_admin_fonts' );
 
 /**
- * Load Featured Categories feature.
- */
-require get_template_directory() . '/inc/featured-categories.php';
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
+ * Extending WordPress functionality
  */
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/comments.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
 require get_template_directory() . '/inc/extras.php';
 
 /**
@@ -254,6 +240,21 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Featured Categories functionality.
+ */
+require get_template_directory() . '/inc/featured-categories.php';
+
+/**
+ * Implement custom colors
+ */
+// require get_template_directory() . '/inc/custom-colors.php';
+
+/**
+ * Backwards compatability for 4.0+
+ */
+require get_template_directory() . '/inc/back-compat.php';
