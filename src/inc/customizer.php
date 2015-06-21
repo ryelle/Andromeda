@@ -86,7 +86,7 @@ function andromeda_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'andromeda_customize_preview_js' );
 
-if ( class_exists( 'WP_Customize_Color_Control' ) ) {
+if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
 	 * Custom control for the category dropdown
 	 */
