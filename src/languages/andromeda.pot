@@ -24,23 +24,12 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 
-#: 404.php:15
+#: 404.php:11
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the "
-"links below or a search?"
-msgstr ""
-
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr ""
-
-#: 404.php:44
-#. translators: %1$s: smiley
-msgid "Try looking in the monthly archives. %1$s"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
 #: comments.php:46
@@ -99,9 +88,91 @@ msgstr ""
 msgid "See all recent posts"
 msgstr ""
 
-#: inc/comments.php:47 inc/comments.php:96 inc/template-tags.php:175
+#: inc/back-compat.php:34
+msgid "Page %s"
+msgstr ""
+
+#: inc/back-compat.php:68
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/back-compat.php:72
+msgid "Older posts"
+msgstr ""
+
+#: inc/back-compat.php:76
+msgid "Newer posts"
+msgstr ""
+
+#: inc/back-compat.php:101
+msgid "Post navigation"
+msgstr ""
+
+#: inc/back-compat.php:168 inc/back-compat.php:183
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: inc/back-compat.php:170
+msgid "in %1$s"
+msgstr ""
+
+#: inc/back-compat.php:185
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/back-compat.php:191
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/back-compat.php:191
+msgid "1 Comment"
+msgstr ""
+
+#: inc/back-compat.php:191
+msgid "% Comments"
+msgstr ""
+
+#: inc/back-compat.php:195 inc/comments.php:47 inc/comments.php:96
 #: partial/content-page.php:27
 msgid "Edit"
+msgstr ""
+
+#: inc/back-compat.php:213
+msgid "Category: %s"
+msgstr ""
+
+#: inc/back-compat.php:215
+msgid "Tag: %s"
+msgstr ""
+
+#: inc/back-compat.php:217
+msgid "Author: %s"
+msgstr ""
+
+#: inc/back-compat.php:219
+msgid "Year: %s"
+msgstr ""
+
+#: inc/back-compat.php:221
+msgid "Month: %s"
+msgstr ""
+
+#: inc/back-compat.php:223
+msgid "Day: %s"
+msgstr ""
+
+#: inc/back-compat.php:245
+msgid "Archives: %s"
+msgstr ""
+
+#: inc/back-compat.php:249
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/back-compat.php:251
+msgid "Archives"
 msgstr ""
 
 #: inc/comments.php:58
@@ -148,107 +219,21 @@ msgstr ""
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
-#: inc/extras.php:146
-msgid "Page %s"
-msgstr ""
-
 #: inc/template-tags.php:29
 msgid "Continue reading %s"
 msgstr ""
 
-#: inc/template-tags.php:48
-msgid "Posts navigation"
-msgstr ""
-
-#: inc/template-tags.php:52
-msgid "Older posts"
-msgstr ""
-
-#: inc/template-tags.php:56
-msgid "Newer posts"
-msgstr ""
-
-#: inc/template-tags.php:81
-msgid "Post navigation"
-msgstr ""
-
-#: inc/template-tags.php:148 inc/template-tags.php:163
-#. translators: used between list items, there is a space after the comma
-msgid ", "
-msgstr ""
-
-#: inc/template-tags.php:150
-msgid "in %1$s"
-msgstr ""
-
-#: inc/template-tags.php:165
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc/template-tags.php:171
-msgid "Leave a comment"
-msgstr ""
-
-#: inc/template-tags.php:171
-msgid "1 Comment"
-msgstr ""
-
-#: inc/template-tags.php:171
-msgid "% Comments"
-msgstr ""
-
-#: inc/template-tags.php:193
-msgid "Category: %s"
-msgstr ""
-
-#: inc/template-tags.php:195
-msgid "Tag: %s"
-msgstr ""
-
-#: inc/template-tags.php:197
-msgid "Author: %s"
-msgstr ""
-
-#: inc/template-tags.php:199
-msgid "Year: %s"
-msgstr ""
-
-#: inc/template-tags.php:201
-msgid "Month: %s"
-msgstr ""
-
-#: inc/template-tags.php:203
-msgid "Day: %s"
-msgstr ""
-
-#: inc/template-tags.php:225
-msgid "Archives: %s"
-msgstr ""
-
-#: inc/template-tags.php:229
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-msgid "%1$s: %2$s"
-msgstr ""
-
-#: inc/template-tags.php:231
-msgid "Archives"
-msgstr ""
-
-#: partial/content-none.php:13
-msgid "Nothing Found"
-msgstr ""
-
-#: partial/content-none.php:19
+#: partial/content-none.php:16
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: partial/content-none.php:23
+#: partial/content-none.php:20
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: partial/content-none.php:28
+#: partial/content-none.php:25
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -262,7 +247,11 @@ msgstr ""
 msgid "See all %s"
 msgstr ""
 
-#: search.php:16
+#: partial/featured-post.php:14
+msgid "Featured Post"
+msgstr ""
+
+#: partial/header-search.php:9
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -317,77 +306,77 @@ msgctxt "Aileron font: on or off"
 msgid "on"
 msgstr ""
 
-#: inc/comments.php:44 inc/comments.php:93
-msgctxt "1: date, 2: time"
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: inc/template-tags.php:106
+#: inc/back-compat.php:126
 msgctxt "post date"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:134
+#: inc/back-compat.php:154
 msgctxt "post date"
 msgid "Posted %s"
 msgstr ""
 
-#: inc/template-tags.php:199
+#: inc/back-compat.php:219
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/template-tags.php:201
+#: inc/back-compat.php:221
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/template-tags.php:203
+#: inc/back-compat.php:223
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:206
+#: inc/back-compat.php:226
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/template-tags.php:208
+#: inc/back-compat.php:228
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/template-tags.php:210
+#: inc/back-compat.php:230
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/template-tags.php:212
+#: inc/back-compat.php:232
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/template-tags.php:214
+#: inc/back-compat.php:234
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/template-tags.php:216
+#: inc/back-compat.php:236
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/template-tags.php:218
+#: inc/back-compat.php:238
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/template-tags.php:220
+#: inc/back-compat.php:240
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/template-tags.php:222
+#: inc/back-compat.php:242
 msgctxt "post format archive title"
 msgid "Chats"
+msgstr ""
+
+#: inc/comments.php:44 inc/comments.php:93
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
 msgstr ""
