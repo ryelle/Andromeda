@@ -13,7 +13,7 @@ input[type="submit"] {
 	transition: background-color linear 0.1s;
 
 	&:hover {
-		background-color: $color__link-hover;
+		background-color: $color__link-accent;
 		color: $color__text-placeholder;
 	}
 

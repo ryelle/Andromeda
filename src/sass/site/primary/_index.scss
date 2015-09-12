@@ -30,7 +30,7 @@
 	max-width: 50%;
 
 	.no-image & {
-		color: white;
+		color: $color__text-placeholder;
 
 		a {
 			position: relative;
@@ -71,11 +71,11 @@
 	a:hover .placeholder,
 	a:focus .placeholder {
 		color: $color__text-placeholder;
-		background-color: $color__link-hover;
+		background-color: $color__link-accent;
 	}
 
 	a:focus img {
-		box-shadow: 0 3px 0 $color__link-hover;
+		box-shadow: 0 3px 0 $color__link-accent;
 	}
 }
 
