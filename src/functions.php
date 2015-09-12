@@ -253,8 +253,3 @@ require get_template_directory() . '/inc/featured-categories.php';
  * Implement custom colors
  */
 // require get_template_directory() . '/inc/custom-colors.php';
-
-/**
- * Backwards compatability for 4.0+
- */
-require get_template_directory() . '/inc/back-compat.php';
