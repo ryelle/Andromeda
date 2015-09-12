@@ -8,8 +8,8 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0 $size__gutter $size__gutter;
-	border-top: 1px solid $color__border;
-	border-bottom: 1px solid $color__border;
+	border-width: 1px 0;
+	border-style: solid;
 	@include font-size( 2.0 );
 	font-style: italic;
 	text-align: center;
@@ -20,7 +20,6 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
 	font-family: $font__pre;
 	@include font-size( 1.5 );
 	line-height: $font__line-height-pre;
@@ -36,12 +35,12 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-width: 0 0 1px;
+	border-style: dotted;
 	cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
 	text-decoration: none;
 }
 
@@ -54,10 +53,6 @@ big {
 .comment-metadata {
 	@include font-size( 1.4 );
 	font-style: italic;
-
-	&, a, a:link, a:visited {
-		color: $color__text-meta;
-	}
 
 	.sep {
 		margin: 0 5px;
@@ -88,10 +83,12 @@ big {
 .widget table {
 	th {
 		padding: 5px 5px 10px;
-		border-bottom: 1px solid $color__border-th;
+		border-width: 0 0 1px;
+		border-style: solid;
 		@include smallcaps;
 		text-align: left;
 	}
+
 	td {
 		padding: 5px;
 	}

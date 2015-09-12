@@ -12,7 +12,8 @@
 #page #infinite-handle {
 	clear: both;
 	margin-top: $size__gutter-2 + 19px;
-	border-top: 1px solid $color__border;
+	border-width: 1px 0 0;
+	border-style: solid;
 
 	span {
 		float: right;
@@ -20,7 +21,6 @@
 		margin-top: -19px;
 		padding: 0;
 		width: 50%;
-		background-color: transparent;
 		text-align: right;
 
 		button,
@@ -28,9 +28,8 @@
 		button:focus {
 			display: inline-block;
 			padding: 10px 30px;
-			color: $color__text-main;
-			background-color: $color__background-body;
-			border: 1px solid $color__border;
+			border-width: 1px;
+			border-style: solid;
 		}
 	}
 }

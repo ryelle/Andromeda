@@ -6,15 +6,13 @@ input[type="search"],
 textarea {
 	width: 100%;
 	box-sizing: border-box;
-	color: $color__text-input;
 	font-family: $font__input;
-	background-color: $color__background-input;
-	border: 1px solid $color__border-input;
+	border-width: 1px;
+	border-style: solid;
 
 	&:focus {
 		outline: none;
-		box-shadow: 0 2px 0 $color__border-input;
-		color: $color__text-input-focus;
+		box-shadow: 0 2px 0 currentColor;
 	}
 }
 

@@ -1,0 +1,255 @@
+// $color__background-body: #fff;
+// $color__text-main: #333;
+
+$color__background-body: #222;
+$color__text-main: #ddd;
+$color__link-accent: #3498db;
+
+// Based on BG & text color:
+$color__background-hr: rgba( $color__text-main, 0.25 );
+$color__background-button: $color__background-body;
+$color__background-input: rgba( $color__text-main, 0.02 );
+$color__background-pre: rgba( $color__text-main, 0.09 );
+$color__background-ins: #fff9c0;
+$color__background-placeholder: rgba( $color__text-main, 0.5 );
+
+$color__text-meta: rgba( $color__text-main, 0.5 );
+$color__text-footer: rgba( $color__text-main, 0.75 );
+$color__text-input: rgba( $color__text-main, 0.92 );
+
+$color__text-button: darken( $color__text-main, 7 );
+$color__text-input-focus: $color__text-main;
+$color__text-placeholder: $color__background-body;
+
+$color__border: darken( $color__text-main, 7 );
+$color__border-button: $color__text-main;
+$color__border-input: $color__text-main;
+$color__border-abbr: rgba( $color__text-main, 0.75 );
+$color__border-th: rgba( $color__text-main, 0.09 );
+
+// Based on link color:
+$color__link: rgba( $color__text-main, 0.9 );
+$color__link-visited: $color__link;
+$color__link-social: rgba( $color__text-main, 0.41 );
+$color__link-social-hover: $color__link-accent;
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+}
+
+pre {
+	background: $color__background-pre;
+}
+
+abbr, acronym {
+	border-color: $color__border-abbr;
+}
+
+mark, ins {
+	background: $color__background-ins;
+}
+
+hr {
+	background-color: $color__background-hr;
+}
+
+.entry-meta,
+.entry-footer,
+.comment-metadata {
+	&, a, a:link, a:visited {
+		color: $color__text-meta;
+	}
+}
+
+.entry-content table,
+.widget table {
+	th {
+		border-color: $color__border-th;
+	}
+}
+
+blockquote,
+.site-header,
+.posts-navigation,
+.widget,
+.site-main,
+.comments-area,
+.comment-list + .comment-respond,
+.reply a,
+.site-footer {
+	border-color: $color__border;
+}
+
+.site-description {
+	color: $color__text-meta;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border-color: $color__border-button;
+	background: $color__background-button;
+	color: $color__text-button;
+
+	&:hover {
+		background-color: $color__link-accent;
+		color: $color__text-placeholder;
+	}
+
+	&:active,
+	&:focus {
+		box-shadow: 0 2px 0 $color__border-button;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: $color__text-input;
+	background-color: $color__background-input;
+	border-color: $color__border-input;
+
+	&:focus {
+		box-shadow: 0 2px 0 $color__border-input;
+		color: $color__text-input-focus;
+	}
+}
+
+a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-accent;
+	}
+}
+
+.entry-content,
+.comment-content,
+.widget {
+	a {
+		color: $color__link-accent;
+
+		&:visited {
+			color: $color__link-accent;
+		}
+	}
+}
+
+.read-more {
+	a:hover,
+	a:focus,
+	a:active {
+		color: darken( $color__link-accent, 10% );
+	}
+}
+
+#primary-menu {
+	a:after {
+		color: $color__text-meta;
+	}
+
+	.depth-0 > ul {
+		background-color: $color__background-body;
+
+		li {
+			border-color: $color__border;
+		}
+	}
+}
+
+#social-menu {
+	a {
+		color: $color__link-social;
+
+		&:hover,
+		&:focus {
+			color: $color__link-social-hover;
+		}
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	.nav-previous a,
+	.nav-next a {
+		background-color: $color__background-body;
+		border-color: $color__border;
+	}
+}
+
+.entry-image {
+	.no-image & {
+		color: $color__text-placeholder;
+
+		.placeholder {
+			color: $color__text-placeholder;
+			background-color: $color__background-placeholder;
+		}
+	}
+
+	a:hover .placeholder,
+	a:focus .placeholder {
+		color: $color__text-placeholder;
+		background-color: $color__link-accent;
+	}
+
+	a:focus img {
+		box-shadow: 0 3px 0 $color__link-accent;
+	}
+}
+
+.comment-avatar {
+	.fa {
+		background: $color__background-placeholder;
+		color: $color__text-placeholder;
+	}
+}
+
+
+.site-footer {
+	color: $color__text-footer;
+
+	a:link, a:visited {
+		color: $color__text-footer;
+	}
+}
+
+#page #infinite-handle {
+	border-color: $color__border;
+
+	span {
+		background-color: transparent;
+
+		button,
+		button:hover,
+		button:focus {
+			color: $color__text-main;
+			background-color: $color__background-body;
+			border-color: $color__border;
+		}
+	}
+}
+
+.wp-caption-text {
+	&, a, a:link, a:visited {
+		color: $color__text-meta;
+	}
+}

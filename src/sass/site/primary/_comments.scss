@@ -1,6 +1,7 @@
 .comments-area,
 .comment-list + .comment-respond {
-	border-top: 1px solid $color__border;
+	border-width: 1px 0 0;
+	border-style: solid;
 }
 
 .comment-list {
@@ -29,8 +30,6 @@
 		text-align: center;
 		line-height: 50px;
 		font-size: 1.5em;
-		background: $color__background-placeholder;
-		color: $color__text-placeholder;
 	}
 }
 
@@ -59,7 +58,8 @@
 		@include smallcaps;
 		@include font-size( 1.2 );
 		font-weight: bold;
-		border: 1px solid $color__border;
+		border-width: 1px;
+		border-style: solid;
 	}
 }
 

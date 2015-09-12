@@ -40,7 +40,8 @@ h5, h6 {
 .site-header {
 	margin-bottom: $size__gutter-2;
 	text-align: center;
-	border-bottom: 1px solid $color__border;
+	border-width: 0 0 1px;
+	border-style: solid;
 }
 
 .site-branding {
@@ -63,7 +64,6 @@ h5, h6 {
 .site-description {
 	margin: 0;
 	font-style: italic;
-	color: $color__text-meta;
 }
 
 .archive-title {
