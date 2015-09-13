@@ -17,7 +17,7 @@ function andromeda_colors_customize_register( $wp_customize ) {
 	// Background Color
 	$wp_customize->add_setting( 'background-color', array(
 		'default'           => '#ffffff',
-		// 'transport'         => 'postMessage',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'background-color', array(
@@ -29,7 +29,7 @@ function andromeda_colors_customize_register( $wp_customize ) {
 	// Text Color
 	$wp_customize->add_setting( 'text-color', array(
 		'default'           => '#333333',
-		// 'transport'         => 'postMessage',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'text-color', array(
@@ -41,7 +41,7 @@ function andromeda_colors_customize_register( $wp_customize ) {
 	// Highlight Color
 	$wp_customize->add_setting( 'accent-color', array(
 		'default'           => '#1abc9c',
-		// 'transport'         => 'postMessage',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'accent-color', array(
@@ -55,11 +55,11 @@ add_action( 'customize_register', 'andromeda_colors_customize_register' );
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-// function andromeda_customize_preview_js() {
-// 	wp_enqueue_script( 'andromeda_colors', get_template_directory_uri() . '/js/customizer-colors.js', array( 'customize-preview', 'underscore' ), ANDROMEDA_VERSION, true );
-// 	wp_localize_script( 'andromeda_colors', 'andromedaColors', array( 'url' => home_url( '/andromeda-css/' ) ) );
-// }
-// add_action( 'customize_preview_init', 'andromeda_customize_preview_js' );
+function andromeda_customize_preview_js() {
+	wp_enqueue_script( 'andromeda-customize', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview', 'underscore' ), ANDROMEDA_VERSION, true );
+	wp_localize_script( 'andromeda-customize', 'andromedaColors', array( 'url' => home_url( '/andromeda-css/' ) ) );
+}
+add_action( 'customize_preview_init', 'andromeda_customize_preview_js' );
 
 
 class Andromeda_Colors {
@@ -69,9 +69,21 @@ class Andromeda_Colors {
 	function __construct() {
 		add_action( 'wp_head', array( $this, 'wp_head' ) );
 
+		add_action( 'init',              array( $this, 'rewrites' ) );
+		add_action( 'template_redirect', array( $this, 'ajax_css' ) );
+
 		if ( defined( 'ANDROMEDA_VERSION' ) ) {
 			$this->cache_prefix .= ANDROMEDA_VERSION . '_';
 		}
+	}
+
+	public function rewrites(){
+		if ( ! class_exists( 'Jetpack' ) ) {
+			return;
+		}
+
+		add_rewrite_tag( '%andromeda%', '([^&]+)' );
+		add_rewrite_rule( '^andromeda-css/?', 'index.php?andromeda=true', 'top' );
 	}
 
 	public function wp_head() {
@@ -79,14 +91,10 @@ class Andromeda_Colors {
 			return;
 		}
 
-		$bg_color = get_theme_mod( 'background-color', '#222' );
-		$text_color = get_theme_mod( 'text-color', '#ddd' );
-		$accent_color = get_theme_mod( 'accent-color', '#e74c3c' );
-
 		$this->print_css( array(
-			'background' => $bg_color,
-			'text' => $text_color,
-			'accent' => $accent_color,
+			'background' => get_theme_mod( 'background-color', '#222' ),
+			'text' => get_theme_mod( 'text-color', '#ddd' ),
+			'accent' => get_theme_mod( 'accent-color', '#e74c3c' ),
 		) );
 	}
 
@@ -100,6 +108,44 @@ class Andromeda_Colors {
 		if ( $css ) {
 			printf( '<style id="andromeda-css">%s</style>', $css );
 		}
+	}
+
+	/**
+	 * Build & send the compiled CSS based on query parameters.
+	 *
+	 * GET expects `background`, `text`, `accent`, and will use default colors
+	 * if any are not passed through.
+	 * @return void  Sends CSS and dies.
+	 */
+	public function ajax_css(){
+		if ( ! get_query_var( 'andromeda' ) ){
+			return;
+		}
+
+		$cache = true;
+		if ( isset( $_GET['no-cache'] ) ){
+			$cache = false;
+		}
+
+		$colors = array(
+			'background' => '#222',
+			'text' => '#ddd',
+			'accent' => '#e74c3c',
+		);
+		foreach ( $colors as $key => $default ) {
+			if ( isset( $_GET[ $key ] ) ) {
+				$color = str_replace( htmlentities('#'), '', $_GET[ $key ] );
+				$valid_color = preg_match( '/^[0-9a-f]{3}([0-9a-f]{3})?$/i', $color );
+				if ( $valid_color ) {
+					$colors[ $key ] = '#' . $color;
+				}
+			}
+		}
+		$css = $this->generate_css( $colors, $cache );
+
+		header( 'Content-type: text/css; charset: UTF-8' );
+		echo $css;
+		die();
 	}
 
 	public function generate_css( $colors, $cache = true ) {

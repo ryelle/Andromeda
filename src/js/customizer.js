@@ -16,21 +16,32 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	// Header text color.
-	wp.customize( 'header_textcolor', function( value ) {
-		value.bind( function( to ) {
-			if ( 'blank' === to ) {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
-				} );
-			} else {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'auto',
-					'color': to,
-					'position': 'relative'
-				} );
+
+	var getCSS = _.debounce( function( to ){
+		var data = {
+			background: wp.customize( 'background-color' ).get(),
+			text: wp.customize( 'text-color' ).get(),
+			accent: wp.customize( 'accent-color' ).get(),
+		};
+		$.when(
+			$.get( andromedaColors.url, data )
+		).then( function( css ) {
+			if ( ! $( '#andromeda-css' ).length ) {
+				$( 'head' ).append( '<style id="andromeda-css"><style>' );
 			}
+
+			$( '#andromeda-css' ).text( css );
 		} );
+	}, 500 );
+
+	wp.customize( 'background-color', function( value ) {
+		value.bind( getCSS );
 	} );
+	wp.customize( 'text-color', function( value ) {
+		value.bind( getCSS );
+	} );
+	wp.customize( 'accent-color', function( value ) {
+		value.bind( getCSS );
+	} );
+
 } )( jQuery );
