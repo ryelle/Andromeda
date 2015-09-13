@@ -26,7 +26,7 @@
 .site-footer {
 	margin-bottom: $size__gutter-3;
 	padding-top: $size__gutter-2;
-	border-top: 1px 0 0;
+	border-width: 1px 0 0;
 	border-style: solid;
 	@include smallcaps;
 	@include font-size( 1.4 );
