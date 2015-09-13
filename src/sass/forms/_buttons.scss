@@ -4,22 +4,14 @@ input[type="reset"],
 input[type="submit"] {
 	padding: 10px $size__gutter 9px;
 	border: 1px solid;
-	border-color: $color__border-button;
-	background: $color__background-button;
-	color: $color__text-button;
 	@include smallcaps;
 	@include font-size( 1.2 );
 	font-weight: bold;
 	transition: background-color linear 0.1s;
 
-	&:hover {
-		background-color: $color__link-hover;
-		color: $color__text-placeholder;
-	}
-
 	&:active,
 	&:focus {
 		outline: none;
-		box-shadow: 0 2px 0 $color__border-button;
+		box-shadow: 0 2px 0 currentColor;
 	}
 }

@@ -14,9 +14,4 @@
 .wp-caption-text {
 	@include font-size( 1.4 );
 	font-style: italic;
-	color: $color__text-meta;
-
-	&, a, a:link, a:visited {
-		color: $color__text-meta;
-	}
 }

@@ -40,7 +40,6 @@
 
 		&:after {
 			content: '/';
-			color: $color__text-meta;
 			padding: 0 0 0 20px;
 
 			li:last-of-type & {
@@ -59,7 +58,6 @@
 		top: 18px;
 		left: -999em;
 		z-index: 99999;
-		background-color: $color__background-body;
 		text-align: left;
 
 		@include font-size( 1.4 );
@@ -72,12 +70,12 @@
 
 		li {
 			min-width: 100%;
-			border-left: 1px solid $color__border;
-			border-right: 1px solid $color__border;
+			border-width: 0 1px;
+			border-style: solid;
 
 			&:last-of-type {
 				padding-bottom: 10px;
-				border-bottom: 1px solid $color__border;
+				border-width: 0 1px 1px;
 			}
 
 			&:hover > ul,
@@ -131,7 +129,6 @@
 	}
 
 	a {
-		color: $color__link-social;
 		@include fa-icon();
 		margin: 1px 2px 0;
 		padding: 0 !important;
@@ -147,7 +144,6 @@
 
 		&:hover,
 		&:focus {
-			color: $color__link-social-hover;
 			text-decoration: none;
 		}
 	}
@@ -270,8 +266,8 @@
 	.nav-next a {
 		display: inline-block;
 		padding: 10px 30px;
-		background-color: $color__background-body;
-		border: 1px solid $color__border;
+		border-width: 1px;
+		border-style: solid;
 	}
 
 	@media screen and (max-width: 1000px) and (min-width: 800px), screen and (max-width: 600px) {
@@ -300,7 +296,8 @@
 .posts-navigation {
 	clear: both;
 	margin-top: $size__gutter-2 + 19px;
-	border-top: 1px solid $color__border;
+	border-width: 1px 0 0;
+	border-style: solid;
 
 	.nav-links {
 		margin-top: -19px;

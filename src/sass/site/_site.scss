@@ -26,13 +26,12 @@
 .site-footer {
 	margin-bottom: $size__gutter-3;
 	padding-top: $size__gutter-2;
-	border-top: 1px solid $color__border;
+	border-width: 1px 0 0;
+	border-style: solid;
 	@include smallcaps;
-	color: $color__text-footer;
 	@include font-size( 1.4 );
 
 	a:link, a:visited {
-		color: $color__text-footer;
 		text-decoration: underline;
 	}
 

@@ -1,7 +1,8 @@
 .sticky { /*! not used */}
 
 .site-main {
-	border-top: 1px solid $color__border;
+	border-width: 1px 0 0;
+	border-style: solid;
 
 	.no-featured-posts & {
 		border-top: none;
@@ -30,8 +31,6 @@
 	max-width: 50%;
 
 	.no-image & {
-		color: white;
-
 		a {
 			position: relative;
 			display: block;
@@ -49,8 +48,6 @@
 				left: 0;
 				right: 0;
 				bottom: 0;
-			color: $color__text-placeholder;
-			background-color: $color__background-placeholder;
 			text-align: center;
 			vertical-align: middle;
 			transition: background-color linear 0.1s;
@@ -68,14 +65,8 @@
 		}
 	}
 
-	a:hover .placeholder,
-	a:focus .placeholder {
-		color: $color__text-placeholder;
-		background-color: $color__link-hover;
-	}
-
 	a:focus img {
-		box-shadow: 0 3px 0 $color__link-hover;
+		box-shadow: 0 3px 0 currentColor;
 	}
 }
 

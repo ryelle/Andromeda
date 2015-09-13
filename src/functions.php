@@ -6,11 +6,7 @@
  */
 
 if ( ! defined( 'ANDROMEDA_VERSION' ) ) {
-	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-		define( 'ANDROMEDA_VERSION', time() );
-	} else {
-		define( 'ANDROMEDA_VERSION', '1.0' );
-	}
+	define( 'ANDROMEDA_VERSION', '1.0' );
 }
 
 /**
@@ -252,9 +248,4 @@ require get_template_directory() . '/inc/featured-categories.php';
 /**
  * Implement custom colors
  */
-// require get_template_directory() . '/inc/custom-colors.php';
-
-/**
- * Backwards compatability for 4.0+
- */
-require get_template_directory() . '/inc/back-compat.php';
+require get_template_directory() . '/inc/custom-colors.php';
