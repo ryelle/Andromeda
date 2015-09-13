@@ -17,15 +17,23 @@ $color__text-meta: rgba( $color__text-main, 0.5 );
 $color__text-footer: rgba( $color__text-main, 0.75 );
 $color__text-input: rgba( $color__text-main, 0.92 );
 
-$color__text-button: darken( $color__text-main, 7 );
+
 $color__text-input-focus: $color__text-main;
 $color__text-placeholder: $color__background-body;
 
-$color__border: darken( $color__text-main, 7 );
 $color__border-button: $color__text-main;
 $color__border-input: $color__text-main;
 $color__border-abbr: rgba( $color__text-main, 0.75 );
 $color__border-th: rgba( $color__text-main, 0.09 );
+
+@if ( lightness( $color__text-main ) < 50 ){
+	$color__text-button: darken( $color__text-main, 7 );
+	$color__border: darken( $color__text-main, 7 );
+} @else {
+	$color__text-button: lighten( $color__text-main, 7 );
+	$color__border: lighten( $color__text-main, 7 );
+}
+
 
 // Based on link color:
 $color__link: rgba( $color__text-main, 0.9 );
