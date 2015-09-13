@@ -1,9 +1,9 @@
 // $color__background-body: #fff;
 // $color__text-main: #333;
 
-$color__background-body: #222;
-$color__text-main: #ddd;
-$color__link-accent: #3498db;
+$color__background-body: #fff !default;
+$color__text-main: #333 !default;
+$color__link-accent: #3498db !default;
 
 // Based on BG & text color:
 $color__background-hr: rgba( $color__text-main, 0.25 );
