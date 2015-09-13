@@ -252,4 +252,4 @@ require get_template_directory() . '/inc/featured-categories.php';
 /**
  * Implement custom colors
  */
-// require get_template_directory() . '/inc/custom-colors.php';
+require get_template_directory() . '/inc/custom-colors.php';
