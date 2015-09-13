@@ -6,11 +6,7 @@
  */
 
 if ( ! defined( 'ANDROMEDA_VERSION' ) ) {
-	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-		define( 'ANDROMEDA_VERSION', time() );
-	} else {
-		define( 'ANDROMEDA_VERSION', '1.0' );
-	}
+	define( 'ANDROMEDA_VERSION', '1.0' );
 }
 
 /**
