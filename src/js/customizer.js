@@ -19,9 +19,10 @@
 
 	var getCSS = _.debounce( function( to ){
 		var data = {
-			background: wp.customize( 'background-color' ).get(),
-			text: wp.customize( 'text-color' ).get(),
-			accent: wp.customize( 'accent-color' ).get(),
+			'background': wp.customize( 'background-color' ).get(),
+			'text': wp.customize( 'text-color' ).get(),
+			'accent': wp.customize( 'accent-color' ).get(),
+			'no-cache': true,
 		};
 		$.when(
 			$.get( andromedaColors.url, data )
