@@ -92,8 +92,8 @@ class Andromeda_Colors {
 		}
 
 		$this->print_css( array(
-			'background' => get_theme_mod( 'background-color', '#222' ),
-			'text' => get_theme_mod( 'text-color', '#ddd' ),
+			'background' => get_theme_mod( 'background-color', '#fff' ),
+			'text' => get_theme_mod( 'text-color', '#333' ),
 			'accent' => get_theme_mod( 'accent-color', '#e74c3c' ),
 		) );
 	}
