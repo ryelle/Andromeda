@@ -127,6 +127,16 @@ textarea {
 	}
 }
 
+::-webkit-input-placeholder {
+	color: rgba( $color__text-input, 0.5 );
+}
+::-moz-placeholder {
+	color: rgba( $color__text-input, 0.5 );
+}
+:-ms-input-placeholder {
+	color: rgba( $color__text-input, 0.5 );
+}
+
 a {
 	color: $color__link;
 
