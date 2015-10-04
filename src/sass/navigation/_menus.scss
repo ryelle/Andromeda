@@ -2,7 +2,7 @@
 	position: relative;
 	clear: both;
 	display: block;
-	padding-bottom: $size__gutter;
+	padding-bottom: 10px;
 	width: 100%;
 
 	font-family: $font__header;
@@ -21,11 +21,13 @@
 		display: inline-block;
 		position: relative;
 	}
+
+	.depth-0 {
+		line-height: 1.8;
+	}
 }
 
 #primary-menu {
-	line-height: 1;
-
 	li {
 		&:hover > ul,
 		&.focus > ul {
@@ -55,7 +57,7 @@
 
 	.depth-0 > ul {
 		position: absolute;
-		top: 18px;
+		top: 22px;
 		left: -999em;
 		z-index: 99999;
 		text-align: left;
@@ -72,6 +74,7 @@
 			min-width: 100%;
 			border-width: 0 1px;
 			border-style: solid;
+			line-height: 1.2;
 
 			&:last-of-type {
 				padding-bottom: 10px;
@@ -133,12 +136,12 @@
 		margin: 1px 2px 0;
 		padding: 0 !important;
 		width: 24px;
-		height: 20px;
+		height: 33px;
 		font-size: 16px;
 		overflow: hidden;
 
 		&:before {
-			padding: 0 0 5px;
+			padding: 7px 0 9px;
 			display: block;
 		}
 
