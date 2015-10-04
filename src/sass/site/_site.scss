@@ -30,6 +30,7 @@
 	border-style: solid;
 	@include smallcaps;
 	@include font-size( 1.4 );
+	line-height: 1.6;
 
 	a:link, a:visited {
 		text-decoration: underline;
