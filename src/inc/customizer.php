@@ -31,7 +31,7 @@ function andromeda_customize_register( $wp_customize ) {
 		'section'     => 'andromeda_settings',
 		'type'        => 'number',
 		'input_attrs' => array( 'min' => 1, 'max' => 10 ),
-		'description' => __( 'We reccomend 3.', 'andromeda' ),
+		'description' => __( 'We recommend 3.', 'andromeda' ),
 	) );
 
 	// first-home-category: cat dropdown
