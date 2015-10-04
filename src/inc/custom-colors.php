@@ -61,6 +61,13 @@ function andromeda_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'andromeda_customize_preview_js' );
 
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function andromeda_customize_validate_js() {
+	wp_enqueue_script( 'andromeda-validate', get_template_directory_uri() . '/js/customize-validate.js', array(), ANDROMEDA_VERSION, true );
+}
+add_action( 'customize_controls_print_footer_scripts', 'andromeda_customize_validate_js', 0, 99 );
 
 class Andromeda_Colors {
 
