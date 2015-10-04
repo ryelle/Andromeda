@@ -78,12 +78,6 @@ function andromeda_setup() {
 		'aside', 'status', 'gallery', 'image', 'audio', 'video', 'quote', 'link', 'chat',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'andromeda_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-
 	// Style the content in TinyMCE
 	add_editor_style();
 }
