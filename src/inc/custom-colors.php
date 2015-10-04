@@ -53,7 +53,7 @@ function andromeda_colors_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'andromeda_colors_customize_register' );
 
 /**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ * Load our JS file in the preview frame of the customizer. This controls the "live preview" for this theme.
  */
 function andromeda_customize_preview_js() {
 	wp_enqueue_script( 'andromeda-customize', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview', 'underscore' ), ANDROMEDA_VERSION, true );
@@ -62,10 +62,10 @@ function andromeda_customize_preview_js() {
 add_action( 'customize_preview_init', 'andromeda_customize_preview_js' );
 
 /**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ * Load our JS file in the controls frame of the customizer. This sets up validation functions.
  */
 function andromeda_customize_validate_js() {
-	wp_enqueue_script( 'andromeda-validate', get_template_directory_uri() . '/js/customize-validate.js', array(), ANDROMEDA_VERSION, true );
+	wp_enqueue_script( 'andromeda-validate', get_template_directory_uri() . '/js/customizer-validate.js', array(), ANDROMEDA_VERSION, true );
 }
 add_action( 'customize_controls_print_footer_scripts', 'andromeda_customize_validate_js', 0, 99 );
 
