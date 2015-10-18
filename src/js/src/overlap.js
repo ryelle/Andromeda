@@ -13,8 +13,8 @@
 		var primary = document.getElementById( 'primary-menu' );
 		var social = document.getElementById( 'social-menu' );
 
-		if ( 'undefined' === typeof primary || 'undefined' === typeof social ) {
-			console.log( 'There\'s only 1 menu here.' );
+		// Make sure we have both menus. Unnecessary if not.
+		if ( 'undefined' === typeof primary || 'undefined' === typeof social || null === primary || null === social ) {
 			return;
 		}
 
