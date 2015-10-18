@@ -33,6 +33,11 @@
 		&.focus > ul {
 			left: auto;
 		}
+
+		&:last-of-type a:after {
+			content: '';
+			padding: 0;
+		}
 	}
 
 	a {
@@ -43,11 +48,6 @@
 		&:after {
 			content: '/';
 			padding: 0 0 0 20px;
-
-			li:last-of-type & {
-				content: '';
-				padding: 0;
-			}
 		}
 	}
 
@@ -124,6 +124,10 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+
+	.menu-social-container:last-of-type & {
+		position: relative;
+	}
 
 	.overlapped & {
 		position: static;
