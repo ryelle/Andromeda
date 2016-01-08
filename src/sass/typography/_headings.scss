@@ -2,39 +2,31 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $font__header;
 }
 
-h1 {
-	@include font-size( $font__size-h1 );
-
-	.entry-content & {
+.entry-content {
+	h1 {
 		@include font-size( $font__size-h1-content );
 	}
-}
 
-h2 {
-	margin-bottom: $size__gutter;
-	@include font-size( $font__size-h2 );
-}
+	h2 {
+		margin-bottom: $size__gutter;
+		@include font-size( $font__size-h2 );
+	}
 
-h3,
-.page-title,
-.search-title,
-.comments-title,
-.comment-reply-title,
-.section-title,
-.posts-navigation,
-#page #infinite-handle button {
-	@include smallcaps;
-	font-weight: bold;
-}
+	h3 {
+		@include smallcaps;
+		font-weight: bold;
+	}
 
-h4 {
-	@include font-size( $font__size-h4 );
-}
+	h4 {
+		@include font-size( $font__size-h4 );
+	}
 
-h5, h6 {
-	@include font-size( $font__size-h5 );
-	text-transform: uppercase;
-	letter-spacing: .04em;
+	h5,
+	h6 {
+		@include font-size( $font__size-h5 );
+		text-transform: uppercase;
+		letter-spacing: .04em;
+	}
 }
 
 .site-header {
@@ -55,6 +47,7 @@ h5, h6 {
 .site-title {
 	margin-bottom: 0;
 	font-family: $font__logo;
+	@include font-size( $font__size-h1 );
 
 	a {
 		text-decoration: none;
@@ -66,20 +59,20 @@ h5, h6 {
 	font-style: italic;
 }
 
-.archive-title {
-	text-align: center;
-}
-
 .page-title,
 .entry-title,
-.widget-title,
 .search-title {
 	margin-top: 0;
+	margin-bottom: $size__gutter;
+	@include font-size( $font__size-h2 );
 	line-height: 1.2;
 }
 
 .page-title {
 	margin-bottom: 0;
+	@include smallcaps;
+	font-weight: bold;
+	line-height: 1.2;
 }
 
 .archive-title,
@@ -87,10 +80,28 @@ h5, h6 {
 	margin: 0 0 $size__gutter-2;
 	@include font-size( 6.4 );
 	line-height: 1.2;
+	text-align: center;
 }
 
 .search-title {
 	margin: 0 0 $size__gutter-2;
+	@include smallcaps;
+	font-weight: bold;
+}
+
+.widget-title {
+	margin-top: 0;
+	margin-bottom: $size__gutter;
+	@include smallcaps;
+}
+
+.comments-title,
+.comment-reply-title,
+.section-title,
+.posts-navigation,
+#page #infinite-handle button {
+	@include smallcaps;
+	font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {
