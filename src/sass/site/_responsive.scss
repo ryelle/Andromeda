@@ -36,8 +36,8 @@
 			.entry-image {
 				box-sizing: border-box;
 				float: left;
-				padding-right: 30px;
-				max-width: 50%;
+				margin-right: 30px;
+				max-width: calc( 50% - 30px );
 			}
 			.entry-header {
 				float: left;

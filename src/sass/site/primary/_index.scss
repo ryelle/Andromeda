@@ -29,6 +29,11 @@
 	float: left;
 	margin: -10px 30px $size__gutter 0;
 	max-width: 50%;
+	text-align: center;
+
+	.home & {
+		width: 350px;
+	}
 
 	.no-image & {
 		a {

@@ -208,8 +208,11 @@ a {
 }
 
 .entry-image {
+	background-color: $color__background-placeholder;
+
 	.no-image & {
 		color: $color__text-placeholder;
+		background-color: transparent;
 
 		.placeholder {
 			color: $color__text-placeholder;
