@@ -33,6 +33,8 @@ function andromeda_get_default_colors() {
 function andromeda_colors_customize_register( $wp_customize ) {
 	$colors = andromeda_get_default_colors();
 
+	$wp_customize->get_section( 'colors' )->description = __( 'Customize these colors to change the look of your website.', 'andromeda' );
+
 	$wp_customize->remove_setting( 'background_color' );
 
 	// Background Color
@@ -56,6 +58,7 @@ function andromeda_colors_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text-color', array(
 		'settings'    => 'text-color',
 		'section'     => 'colors',
+		'description' => __( 'This color might be adjusted to be visible on your selected background color.', 'andromeda' ),
 		'label'       => __( 'Text Color', 'andromeda' ),
 	) ) );
 
@@ -68,7 +71,7 @@ function andromeda_colors_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent-color', array(
 		'settings'    => 'accent-color',
 		'section'     => 'colors',
-		'label'       => __( 'Highlight Color', 'andromeda' ),
+		'label'       => __( 'Accent Color', 'andromeda' ),
 	) ) );
 }
 add_action( 'customize_register', 'andromeda_colors_customize_register' );
