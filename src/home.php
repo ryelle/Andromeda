@@ -24,7 +24,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<header class="page-header">
-			<h1 class="page-title"><?php _e( 'Recent Posts', 'andromeda' ); ?></h1>
+			<h2 class="page-title"><?php _e( 'Recent Posts', 'andromeda' ); ?></h2>
 		</header><!-- .page-header -->
 
 		<div class="recent-posts">

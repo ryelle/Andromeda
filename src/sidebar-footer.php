@@ -11,5 +11,6 @@ if ( ! is_active_sidebar( 'sidebar-2' ) ) {
 ?>
 
 <div id="tertiary" class="widget-area footer-widgets" role="complementary">
+	<h1 class="screen-reader-text"><?php _e( 'Footer Content', 'andromeda' ); ?></h1>
 	<?php dynamic_sidebar( 'sidebar-2' ); ?>
 </div><!-- #secondary -->
